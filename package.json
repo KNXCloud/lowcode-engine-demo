@@ -1,0 +1,51 @@
+{
+  "scripts": {
+    "start": "build-scripts start --disable-reload --port 5557",
+    "build": "build-scripts build"
+  },
+  "dependencies": {
+    "@alilc/lowcode-plugin-code-editor": "^1.0.2",
+    "@alilc/lowcode-plugin-components-pane": "^1.0.3",
+    "@alilc/lowcode-plugin-datasource-pane": "^1.0.5",
+    "@alilc/lowcode-plugin-inject": "^1.0.0",
+    "@alilc/lowcode-plugin-schema": "^1.0.1",
+    "@alilc/lowcode-plugin-undo-redo": "^1.0.0",
+    "@alilc/lowcode-types": "^1.0.8",
+    "@knxcloud/lowcode-vue-renderer": "^1.0.0",
+    "@knxcloud/lowcode-vue-simulator-renderer": "^1.0.0",
+    "lowcode-utils": "link:@knxcloud/@knxcloud/lowcode-utils"
+  },
+  "devDependencies": {
+    "@alib/build-scripts": "^0.1.32",
+    "@alilc/lowcode-engine": "^1.0.8",
+    "@alilc/lowcode-engine-ext": "^1.0.3",
+    "@rushstack/eslint-patch": "^1.1.3",
+    "@types/node": "^17.0.35",
+    "@types/prop-types": "^15.7.5",
+    "@types/react": "^16.9.56",
+    "@types/react-dom": "^16.9.8",
+    "@typescript-eslint/eslint-plugin": "^5.25.0",
+    "@typescript-eslint/parser": "^5.25.0",
+    "build-plugin-component": "^1.10.0",
+    "build-plugin-moment-locales": "^0.1.3",
+    "build-plugin-react-app": "^1.8.5",
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.30.0",
+    "naive-ui": "^2.30.3",
+    "postcss": "8.4.14",
+    "postcss-html": "^1.4.1",
+    "postcss-less": "^6.0.0",
+    "prettier": "^2.6.2",
+    "stylelint": "^14.8.5",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-recommended-less": "^1.0.4",
+    "stylelint-config-recommended-vue": "^1.4.0",
+    "stylelint-config-standard": "^25.0.0",
+    "stylelint-less": "^1.0.5",
+    "typescript": "^4.6.4",
+    "vue": "^3.2.37"
+  }
+}

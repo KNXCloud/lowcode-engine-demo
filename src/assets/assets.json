@@ -1,0 +1,427 @@
+{
+  "packages": [
+    {
+      "package": "vue",
+      "version": "3.2.33",
+      "urls": ["https://cdn.bootcdn.net/ajax/libs/vue/3.2.33/vue.global.js"],
+      "library": "Vue"
+    },
+    {
+      "package": "naive-ui",
+      "version": "2.30.3",
+      "urls": ["https://unpkg.com/naive-ui@2.30.3/dist/index.js"],
+      "library": "naive"
+    }
+  ],
+  "components": [
+    {
+      "title": "页面",
+      "category": "基础",
+      "componentName": "Page",
+      "props": [
+        {
+          "name": "style",
+          "propType": "object",
+          "defaultValue": {
+            "padding": 12
+          }
+        }
+      ],
+      "configure": {
+        "supports": {
+          "style": true
+        },
+        "component": {
+          "isContainer": true,
+          "disableBehaviors": "*"
+        }
+      }
+    },
+    {
+      "title": "插槽",
+      "category": "基础",
+      "componentName": "Slot",
+      "configure": {
+        "component": {
+          "isContainer": true,
+          "disableBehaviors": "*"
+        }
+      }
+    },
+    {
+      "componentName": "NAvatar",
+      "title": "头像",
+      "npm": {
+        "package": "naive-ui",
+        "version": "2.30.3",
+        "exportName": "NAvatar",
+        "destructuring": true
+      },
+      "props": [
+        {
+          "name": "src",
+          "propType": "string"
+        },
+        {
+          "name": "circle",
+          "propType": "bool"
+        },
+        {
+          "name": "round",
+          "propType": "bool"
+        },
+        {
+          "name": "bordered",
+          "propType": "bool"
+        },
+        {
+          "name": "class",
+          "propType": "string"
+        },
+        {
+          "name": "style",
+          "propType": "object"
+        },
+        {
+          "name": "onError",
+          "propType": "func"
+        },
+        {
+          "name": "size",
+          "propType": {
+            "type": "oneOf",
+            "value": ["small", "medium", "large"]
+          },
+          "description": "头像的大小",
+          "defaultValue": "medium"
+        }
+      ],
+      "category": "基础组件"
+    },
+    {
+      "title": "卡片",
+      "category": "基础组件",
+      "componentName": "NCard",
+      "npm": {
+        "package": "naive-ui",
+        "version": "2.30.3",
+        "exportName": "NCard",
+        "destructuring": true
+      },
+      "props": [
+        {
+          "name": "bordered",
+          "propType": "bool"
+        },
+        {
+          "name": "segmented",
+          "propType": "object"
+        },
+        {
+          "name": "title",
+          "propType": "string"
+        },
+        {
+          "name": "header",
+          "propType": "node"
+        },
+        {
+          "name": "action",
+          "propType": "node"
+        },
+        {
+          "name": "footer",
+          "propType": "node"
+        },
+        {
+          "name": "header-extra",
+          "propType": "node"
+        }
+      ],
+      "configure": {
+        "component": {
+          "isContainer": true
+        },
+        "props": [
+          {
+            "name": "bordered",
+            "title": " 边框",
+            "defaultValue": true,
+            "setter": "BoolSetter"
+          },
+          {
+            "type": "group",
+            "title": "分割线",
+            "extraProps": {
+              "display": "block"
+            },
+            "items": [
+              {
+                "name": "segmented.content",
+                "title": "内容分割线",
+                "setter": {
+                  "componentName": "BoolSetter",
+                  "initialValue": false
+                }
+              },
+              {
+                "name": "segmented.footer",
+                "title": "底部分割线",
+                "setter": {
+                  "componentName": "BoolSetter",
+                  "initialValue": false
+                }
+              },
+              {
+                "name": "segmented.action",
+                "title": "操作区分割线",
+                "setter": {
+                  "componentName": "BoolSetter",
+                  "initialValue": false
+                }
+              }
+            ]
+          },
+          {
+            "title": "卡片功能",
+            "type": "group",
+            "extraProps": {
+              "display": "block"
+            },
+            "items": [
+              {
+                "name": "header",
+                "title": "头部",
+                "setter": {
+                  "componentName": "SlotSetter",
+                  "initialValue": {
+                    "type": "JSSlot",
+                    "title": "头部",
+                    "value": []
+                  }
+                }
+              },
+              {
+                "name": "footer",
+                "title": "底部",
+                "setter": {
+                  "componentName": "SlotSetter",
+                  "initialValue": {
+                    "type": "JSSlot",
+                    "title": "底部",
+                    "value": []
+                  }
+                }
+              },
+              {
+                "name": "action",
+                "title": "操作区",
+                "setter": {
+                  "componentName": "SlotSetter",
+                  "initialValue": {
+                    "type": "JSSlot",
+                    "title": "操作区",
+                    "value": []
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "supports": {
+          "loop": false
+        }
+      }
+    },
+    {
+      "title": "文本",
+      "category": "排印",
+      "componentName": "NText",
+      "npm": {
+        "package": "naive-ui",
+        "version": "2.30.3",
+        "exportName": "NText",
+        "destructuring": true
+      },
+      "props": [
+        {
+          "name": "children",
+          "title": "文本内容",
+          "propType": "string"
+        },
+        {
+          "name": "type",
+          "title": "类型",
+          "propType": {
+            "type": "oneOf",
+            "value": ["default", "success", "info", "warning", "error"]
+          }
+        },
+        {
+          "name": "strong",
+          "title": "加粗",
+          "propType": "bool"
+        },
+        {
+          "name": "italic",
+          "title": "斜体",
+          "propType": "bool"
+        },
+        {
+          "name": "underline",
+          "title": "下划线",
+          "propType": "bool"
+        },
+        {
+          "name": "delete",
+          "title": "删除线",
+          "propType": "bool"
+        },
+        {
+          "name": "code",
+          "title": "代码模式",
+          "propType": "bool"
+        },
+        {
+          "name": "depth",
+          "title": "颜色深度",
+          "propType": {
+            "type": "oneOf",
+            "value": ["1", "2", "3"]
+          }
+        }
+      ]
+    },
+    {
+      "title": "图标",
+      "category": "基础组件",
+      "componentName": "NIcon",
+      "npm": {
+        "package": "naive-ui",
+        "version": "2.30.3",
+        "exportName": "NIcon",
+        "destructuring": true
+      },
+      "props": [
+        {
+          "name": "color",
+          "propType": "string"
+        },
+        {
+          "name": "size",
+          "title": "图标大小",
+          "propType": {
+            "type": "oneOfType",
+            "value": ["string", "number"]
+          }
+        }
+      ],
+      "configure": {
+        "props": {
+          "isExtends": true,
+          "override": [
+            {
+              "name": "color",
+              "title": "图标颜色",
+              "setter": "ColorSetter"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "componentList": [
+    {
+      "title": "基础",
+      "children": []
+    },
+    {
+      "title": "排印",
+      "children": [
+        {
+          "title": "文本",
+          "library": "naive-ui",
+          "snippets": [
+            {
+              "title": "文本",
+              "screenshot": "https://img.alicdn.com/imgextra/i4/O1CN01E2PcPW1bNJV5QUVMg_!!6000000003446-55-tps-50-50.svg",
+              "schema": {
+                "componentName": "NText",
+                "props": {
+                  "children": "标题标题"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "基础组件",
+      "children": [
+        {
+          "componentName": "NAvatar",
+          "library": "naive-ui",
+          "title": "头像",
+          "snippets": [
+            {
+              "title": "头像",
+              "screenshot": "https://alifd.oss-cn-hangzhou.aliyuncs.com/fusion-cool/icons/icon-light/ic_light_avatar.png",
+              "schema": {
+                "componentName": "NAvatar",
+                "props": {
+                  "circle": true,
+                  "round": false,
+                  "src": "https://v2.vuejs.org/images/logo.svg",
+                  "size": "medium"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "componentName": "NIcon",
+          "library": "naive-ui",
+          "title": "图标",
+          "snippets": [
+            {
+              "title": "图标",
+              "schema": {
+                "componentName": "NIcon",
+                "props": {
+                  "size": 40
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "布局组件",
+      "children": [
+        {
+          "componentName": "NCard",
+          "library": "naive-ui",
+          "snippets": [
+            {
+              "screenshot": "https://img.alicdn.com/tfs/TB1.Ut6u4D1gK0jSZFNXXcJrVXa-112-64.png",
+              "title": "卡片",
+              "schema": {
+                "componentName": "NCard",
+                "props": {
+                  "header": {
+                    "type": "JSSlot",
+                    "title": "header",
+                    "value": []
+                  }
+                },
+                "children": []
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
