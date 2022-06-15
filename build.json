@@ -2,7 +2,7 @@
   "entry": {
     "preview": "./src/vue/preview.ts"
   },
-  "publicPath": "/",
+  "publicPath": "/lowcode-engine-demo/",
   "externals": {
     "@alifd/next": "var window.Next",
     "@alilc/lowcode-engine": "var window.AliLowCodeEngine",
@@ -19,7 +19,7 @@
     "react-dom": "var window.ReactDOM",
     "vue": "var window.Vue"
   },
-  "outputDir": "dist",
+  "outputDir": "docs",
   "vendor": false,
   "plugins": ["build-plugin-react-app", "./build.plugin.js"]
 }
