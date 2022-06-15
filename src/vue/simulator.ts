@@ -1,5 +1,4 @@
-import '@knxcloud/lowcode-vue-simulator-renderer';
-import { config } from '@knxcloud/lowcode-vue-renderer';
+import { vueRendererConfig } from '@knxcloud/lowcode-vue-simulator-renderer';
 import { ConfigProvider } from './config-provider';
 
-config.setConfigProvider(ConfigProvider);
+vueRendererConfig.setConfigProvider(ConfigProvider);

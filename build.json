@@ -10,6 +10,7 @@
     "@alilc/lowcode-editor-core": "var window.AliLowCodeEngine.common.editorCabin",
     "@alilc/lowcode-designer": "var window.AliLowCodeEngine.common.designerCabin",
     "@alilc/lowcode-editor-skeleton": "var window.AliLowCodeEngine.common.skeletonCabin",
+    "@knxcloud/lowcode-vue-simulator-renderer": "var window.LCVueSimulatorRenderer",
     "naive-ui": "var window.naive",
     "lodash": "var window._",
     "moment": "var window.moment",
@@ -18,6 +19,7 @@
     "react-dom": "var window.ReactDOM",
     "vue": "var window.Vue"
   },
+  "outputDir": "dist",
   "vendor": false,
   "plugins": ["build-plugin-react-app", "./build.plugin.js"]
 }

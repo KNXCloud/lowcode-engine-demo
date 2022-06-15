@@ -3,7 +3,7 @@
     {
       "package": "vue",
       "version": "3.2.33",
-      "urls": ["https://cdn.bootcdn.net/ajax/libs/vue/3.2.33/vue.global.js"],
+      "urls": ["https://unpkg.com/vue@3.2.37/dist/vue.runtime.global.js"],
       "library": "Vue"
     },
     {
@@ -11,6 +11,15 @@
       "version": "2.30.3",
       "urls": ["https://unpkg.com/naive-ui@2.30.3/dist/index.js"],
       "library": "naive"
+    },
+    {
+      "package": "unplugin-vue-iconfont",
+      "version": "1.1.1",
+      "urls": [
+        "https://at.alicdn.com/t/font_2870193_zll5zacnz6.js",
+        "https://unpkg.com/unplugin-vue-iconfont@1.1.1/dist/iconfont-naive.global.js"
+      ],
+      "library": "KIconfont"
     }
   ],
   "components": [
@@ -295,11 +304,11 @@
     {
       "title": "图标",
       "category": "基础组件",
-      "componentName": "NIcon",
+      "componentName": "KIcon",
       "npm": {
-        "package": "naive-ui",
-        "version": "2.30.3",
-        "exportName": "NIcon",
+        "package": "unplugin-vue-iconfont",
+        "version": "1.1.1",
+        "exportName": "KIcon",
         "destructuring": true
       },
       "props": [
@@ -313,6 +322,84 @@
           "propType": {
             "type": "oneOfType",
             "value": ["string", "number"]
+          }
+        },
+        {
+          "name": "name",
+          "title": "图标名称",
+          "propType": {
+            "type": "oneOf",
+            "value": [
+              "setting",
+              "form",
+              "unlock",
+              "move",
+              "star",
+              "warning",
+              "help",
+              "target-rect",
+              "subtract-circle",
+              "close-circle",
+              "user",
+              "filter",
+              "enlarge",
+              "trophy",
+              "classification",
+              "left",
+              "download",
+              "close",
+              "down",
+              "edit",
+              "achievements",
+              "email",
+              "down-circle",
+              "batch",
+              "calendar",
+              "cry",
+              "bell",
+              "left-circle",
+              "check",
+              "attachment",
+              "index",
+              "hotline",
+              "home",
+              "lock",
+              "list",
+              "eye-close",
+              "file-open",
+              "file-close",
+              "up",
+              "prompt",
+              "import",
+              "eye",
+              "plus-circle",
+              "invisible",
+              "search",
+              "toggle-left",
+              "performance",
+              "time",
+              "toggle-right",
+              "remove",
+              "sorting",
+              "target",
+              "plus",
+              "menu",
+              "up-circle",
+              "switch",
+              "narrow",
+              "quote",
+              "sucess",
+              "upload",
+              "right",
+              "right-circle",
+              "performance-setting",
+              "rotate-left",
+              "smile",
+              "rotate-right",
+              "refresh",
+              "fabulous",
+              "message"
+            ]
           }
         }
       ],
@@ -344,7 +431,7 @@
           "snippets": [
             {
               "title": "文本",
-              "screenshot": "https://img.alicdn.com/imgextra/i4/O1CN01E2PcPW1bNJV5QUVMg_!!6000000003446-55-tps-50-50.svg",
+              "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/text.svg",
               "schema": {
                 "componentName": "NText",
                 "props": {
@@ -366,7 +453,7 @@
           "snippets": [
             {
               "title": "头像",
-              "screenshot": "https://alifd.oss-cn-hangzhou.aliyuncs.com/fusion-cool/icons/icon-light/ic_light_avatar.png",
+              "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/avatar.png",
               "schema": {
                 "componentName": "NAvatar",
                 "props": {
@@ -380,16 +467,17 @@
           ]
         },
         {
-          "componentName": "NIcon",
-          "library": "naive-ui",
+          "componentName": "KIcon",
+          "library": "unplugin-vue-iconfont",
           "title": "图标",
           "snippets": [
             {
               "title": "图标",
               "schema": {
-                "componentName": "NIcon",
+                "componentName": "KIcon",
                 "props": {
-                  "size": 40
+                  "size": 40,
+                  "name": "fabulous"
                 }
               }
             }
@@ -405,7 +493,7 @@
           "library": "naive-ui",
           "snippets": [
             {
-              "screenshot": "https://img.alicdn.com/tfs/TB1.Ut6u4D1gK0jSZFNXXcJrVXa-112-64.png",
+              "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/card.png",
               "title": "卡片",
               "schema": {
                 "componentName": "NCard",
