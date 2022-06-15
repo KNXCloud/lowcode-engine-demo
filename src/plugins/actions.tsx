@@ -9,7 +9,7 @@ const save = async () => {
 
 const preview = async () => {
   await saveSchema();
-  window.open('/preview.html');
+  window.open('preview.html');
 };
 
 const savePlugin = (ctx: ILowCodePluginContext) => {
