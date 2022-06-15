@@ -40,9 +40,9 @@ import './editor.less';
       enableCanvasLock: true,
       supportVariableGlobally: true,
       simulatorUrl: [
-        'https://unpkg.com/vue-router@4.0.16/dist/vue-router.global.prod.js',
-        'https://unpkg.com/@knxcloud/lowcode-vue-simulator-renderer@1.0.3/dist/vue-simulator-renderer.js',
-        'https://unpkg.com/@knxcloud/lowcode-vue-simulator-renderer@1.0.3/dist/vue-simulator-renderer.css',
+        'https://unpkg.com/vue-router/dist/vue-router.global.prod.js',
+        'https://unpkg.com/@knxcloud/lowcode-vue-simulator-renderer/dist/vue-simulator-renderer.js',
+        'https://unpkg.com/@knxcloud/lowcode-vue-simulator-renderer/dist/vue-simulator-renderer.css',
         '/js/simulator.js',
       ],
     } as EngineOptions,
