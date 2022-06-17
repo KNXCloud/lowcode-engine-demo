@@ -7,25 +7,17 @@
       "library": "Vue"
     },
     {
-      "package": "naive-ui",
-      "version": "2.30.3",
-      "urls": ["https://unpkg.com/naive-ui@2.30.3/dist/index.js"],
-      "library": "naive"
-    },
-    {
-      "package": "unplugin-vue-iconfont",
-      "version": "1.1.1",
+      "package": "@knx/kui",
+      "version": "1.0.2",
       "urls": [
-        "https://at.alicdn.com/t/font_2870193_zll5zacnz6.js",
-        "https://unpkg.com/unplugin-vue-iconfont@1.1.1/dist/iconfont-naive.global.js"
+        "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/kui/v1.1.0/kui.min.js"
       ],
-      "library": "KIconfont"
+      "library": "Kui"
     }
   ],
   "components": [
     {
       "title": "页面",
-      "category": "基础",
       "componentName": "Page",
       "props": [
         {
@@ -48,7 +40,6 @@
     },
     {
       "title": "插槽",
-      "category": "基础",
       "componentName": "Slot",
       "configure": {
         "component": {
@@ -58,12 +49,13 @@
       }
     },
     {
-      "componentName": "NAvatar",
       "title": "头像",
+      "category": "基础组件",
+      "componentName": "KAvatar",
       "npm": {
-        "package": "naive-ui",
-        "version": "2.30.3",
-        "exportName": "NAvatar",
+        "package": "@knx/kui",
+        "version": "1.0.2",
+        "exportName": "KAvatar",
         "destructuring": true
       },
       "props": [
@@ -84,51 +76,102 @@
           "propType": "bool"
         },
         {
-          "name": "class",
+          "name": "size",
+          "propType": {
+            "type": "oneOfType",
+            "value": ["string", "number"]
+          }
+        }
+      ],
+      "configure": {
+        "props": [
+          {
+            "name": "src",
+            "title": "图片链接地址",
+            "setter": "StringSetter"
+          },
+          {
+            "name": "circle",
+            "title": "是否为原型",
+            "setter": "BoolSetter"
+          },
+          {
+            "name": "round",
+            "title": "是否显示圆角",
+            "setter": "BoolSetter"
+          },
+          {
+            "name": "bordered",
+            "title": "是否带边框",
+            "setter": "BoolSetter"
+          },
+          {
+            "name": "size",
+            "title": "头像大小",
+            "setter": {
+              "componentName": "MixedSetter",
+              "props": {
+                "setters": [
+                  {
+                    "componentName": "RadioGroupSetter",
+                    "props": {
+                      "options": [
+                        { "label": "small", "value": "small" },
+                        { "label": "medium", "value": "medium" },
+                        { "label": "large", "value": "large" }
+                      ],
+                      "defaultValue": "medium"
+                    }
+                  },
+                  "NumberSetter"
+                ]
+              }
+            }
+          }
+        ],
+        "supports": {
+          "style": true,
+          "events": ["onClick", "onError"]
+        }
+      }
+    },
+    {
+      "title": "卡片",
+      "category": "布局组件",
+      "componentName": "KCard",
+      "npm": {
+        "package": "@knx/kui",
+        "version": "1.0.2",
+        "exportName": "KCard",
+        "destructuring": true
+      },
+      "props": [
+        {
+          "name": "title",
           "propType": "string"
-        },
-        {
-          "name": "style",
-          "propType": "object"
-        },
-        {
-          "name": "onError",
-          "propType": "func"
         },
         {
           "name": "size",
           "propType": {
             "type": "oneOf",
-            "value": ["small", "medium", "large"]
-          },
-          "description": "头像的大小",
-          "defaultValue": "medium"
-        }
-      ],
-      "category": "基础组件"
-    },
-    {
-      "title": "卡片",
-      "category": "基础组件",
-      "componentName": "NCard",
-      "npm": {
-        "package": "naive-ui",
-        "version": "2.30.3",
-        "exportName": "NCard",
-        "destructuring": true
-      },
-      "props": [
+            "value": ["small", "medium", "large", "huge"]
+          }
+        },
         {
           "name": "bordered",
           "propType": "bool"
         },
         {
-          "name": "segmented",
-          "propType": "object"
+          "name": "closable",
+          "propType": "bool"
         },
         {
-          "name": "title",
-          "propType": "string"
+          "name": "hoverable",
+          "propType": "bool"
+        },
+        {
+          "name": "segmented",
+          "propType": "object"
         },
         {
           "name": "header",
@@ -148,15 +191,54 @@
         }
       ],
       "configure": {
+        "supports": {
+          "style": true,
+          "events": ["onClose"],
+          "loop": false
+        },
         "component": {
           "isContainer": true
         },
         "props": [
           {
-            "name": "bordered",
-            "title": " 边框",
-            "defaultValue": true,
-            "setter": "BoolSetter"
+            "type": "group",
+            "title": "卡片样式",
+            "extraProps": {
+              "display": "block"
+            },
+            "items": [
+              {
+                "name": "size",
+                "title": "卡片尺寸",
+                "setter": {
+                  "componentName": "RadioGroupSetter",
+                  "props": {
+                    "options": [
+                      { "label": "small", "value": "small" },
+                      { "label": "medium", "value": "medium" },
+                      { "label": "large", "value": "large" },
+                      { "label": "huge", "value": "huge" }
+                    ],
+                    "defaultValue": "medium"
+                  }
+                }
+              },
+              {
+                "name": "bordered",
+                "title": "显示边框",
+                "setter": "BoolSetter"
+              },
+              {
+                "name": "closable",
+                "title": "显示关闭图标",
+                "setter": "BoolSetter"
+              },
+              {
+                "name": "hoverable",
+                "title": "可悬浮",
+                "setter": "BoolSetter"
+              }
+            ]
           },
           {
             "type": "group",
@@ -192,12 +274,17 @@
             ]
           },
           {
-            "title": "卡片功能",
+            "title": "卡片内容",
             "type": "group",
             "extraProps": {
               "display": "block"
             },
             "items": [
+              {
+                "name": "title",
+                "title": "标题内容",
+                "setter": "StringSetter"
+              },
               {
                 "name": "header",
                 "title": "头部",
@@ -206,6 +293,18 @@
                   "initialValue": {
                     "type": "JSSlot",
                     "title": "头部",
+                    "value": []
+                  }
+                }
+              },
+              {
+                "name": "header-extra",
+                "title": "头部附加",
+                "setter": {
+                  "componentName": "SlotSetter",
+                  "initialValue": {
+                    "type": "JSSlot",
+                    "title": "头部附加",
                     "value": []
                   }
                 }
@@ -236,78 +335,144 @@
               }
             ]
           }
-        ],
-        "supports": {
-          "loop": false
-        }
+        ]
       }
     },
     {
       "title": "文本",
-      "category": "排印",
-      "componentName": "NText",
+      "category": "基础组件",
+      "componentName": "KText",
       "npm": {
-        "package": "naive-ui",
-        "version": "2.30.3",
-        "exportName": "NText",
+        "package": "@knx/kui",
+        "version": "1.0.2",
+        "exportName": "KText",
         "destructuring": true
       },
       "props": [
         {
           "name": "children",
-          "title": "文本内容",
           "propType": "string"
         },
         {
           "name": "type",
-          "title": "类型",
-          "propType": {
-            "type": "oneOf",
-            "value": ["default", "success", "info", "warning", "error"]
-          }
+          "propType": "string"
         },
         {
           "name": "strong",
-          "title": "加粗",
           "propType": "bool"
         },
         {
           "name": "italic",
-          "title": "斜体",
           "propType": "bool"
         },
         {
           "name": "underline",
-          "title": "下划线",
           "propType": "bool"
         },
         {
           "name": "delete",
-          "title": "删除线",
           "propType": "bool"
         },
         {
           "name": "code",
-          "title": "代码模式",
           "propType": "bool"
         },
         {
           "name": "depth",
-          "title": "颜色深度",
-          "propType": {
-            "type": "oneOf",
-            "value": ["1", "2", "3"]
-          }
+          "propType": "string"
         }
-      ]
+      ],
+      "configure": {
+        "supports": {
+          "style": true
+        },
+        "props": [
+          {
+            "name": "children",
+            "title": "文本内容",
+            "setter": "StringSetter"
+          },
+          {
+            "name": "type",
+            "title": "排印类型",
+            "setter": {
+              "componentName": "SelectSetter",
+              "props": {
+                "options": [
+                  { "label": "default", "value": "default" },
+                  { "label": "success", "value": "success" },
+                  { "label": "info", "value": "info" },
+                  { "label": "warning", "value": "warning" },
+                  { "label": "error", "value": "error" }
+                ]
+              },
+              "initialValue": "default"
+            }
+          },
+          {
+            "name": "strong",
+            "title": "加粗",
+            "setter": "BoolSetter"
+          },
+          {
+            "name": "italic",
+            "title": "斜体",
+            "setter": "BoolSetter"
+          },
+          {
+            "name": "underline",
+            "title": "下划线",
+            "setter": "BoolSetter"
+          },
+          {
+            "name": "delete",
+            "title": "删除线",
+            "setter": "BoolSetter"
+          },
+          {
+            "name": "code",
+            "title": "代码模式",
+            "setter": "BoolSetter"
+          },
+          {
+            "name": "depth",
+            "title": "文字深度",
+            "setter": {
+              "componentName": "RadioGroupSetter",
+              "props": {
+                "options": [
+                  { "label": "1", "value": "1" },
+                  { "label": "2", "value": "2" },
+                  { "label": "3", "value": "3" }
+                ]
+              }
+            }
+          },
+          {
+            "name": "tag",
+            "title": "DOM 标签",
+            "setter": {
+              "componentName": "SelectSetter",
+              "props": {
+                "options": [
+                  { "label": "p", "value": "p" },
+                  { "label": "span", "value": "span" },
+                  { "label": "label", "value": "label" }
+                ]
+              },
+              "initialValue": "span"
+            }
+          }
+        ]
+      }
     },
     {
       "title": "图标",
       "category": "基础组件",
       "componentName": "KIcon",
       "npm": {
-        "package": "unplugin-vue-iconfont",
-        "version": "1.1.1",
+        "package": "@knx/kui",
+        "version": "1.0.2",
         "exportName": "KIcon",
         "destructuring": true
       },
@@ -318,10 +483,9 @@
         },
         {
           "name": "size",
-          "title": "图标大小",
           "propType": {
             "type": "oneOfType",
-            "value": ["string", "number"]
+            "value": ["number", "string"]
           }
         },
         {
@@ -404,6 +568,9 @@
         }
       ],
       "configure": {
+        "supports": {
+          "style": true
+        },
         "props": {
           "isExtends": true,
           "override": [
@@ -411,51 +578,1089 @@
               "name": "color",
               "title": "图标颜色",
               "setter": "ColorSetter"
+            },
+            {
+              "name": "size",
+              "title": "图标大小",
+              "setter": {
+                "componentName": "MixedSetter",
+                "props": {
+                  "setters": ["NumberSetter", "StringSetter"]
+                }
+              }
             }
           ]
+        }
+      }
+    },
+    {
+      "title": "间距",
+      "category": "布局组件",
+      "componentName": "KSpace",
+      "npm": {
+        "package": "@knx/kui",
+        "version": "1.0.2",
+        "exportName": "KSpace",
+        "destructuring": true
+      },
+      "props": [
+        {
+          "name": "align",
+          "propType": "string"
+        },
+        {
+          "name": "justify",
+          "propType": "string"
+        },
+        {
+          "name": "size",
+          "propType": {
+            "type": "oneOfType",
+            "value": ["string", "number"]
+          }
+        },
+        {
+          "name": "inline",
+          "propType": "bool"
+        },
+        {
+          "name": "vertical",
+          "propType": "bool"
+        },
+        {
+          "name": "wrap",
+          "propType": "bool"
+        },
+        {
+          "name": "item-style",
+          "propType": "string"
+        }
+      ],
+      "configure": {
+        "component": {
+          "isContainer": true
+        },
+        "props": [
+          {
+            "name": "align",
+            "title": "垂直排列方式",
+            "setter": {
+              "componentName": "SelectSetter",
+              "props": {
+                "options": [
+                  { "title": "start", "value": "start" },
+                  { "title": "end", "value": "end" },
+                  { "title": "center", "value": "center" },
+                  { "title": "baseline", "value": "baseline" },
+                  { "title": "stretch", "value": "stretch" }
+                ]
+              }
+            },
+            "defaultValue": "start"
+          },
+          {
+            "name": "justify",
+            "title": "水平排列方式",
+            "setter": {
+              "componentName": "SelectSetter",
+              "props": {
+                "options": [
+                  { "title": "start", "value": "start" },
+                  { "title": "end", "value": "end" },
+                  { "title": "center", "value": "center" },
+                  { "title": "space-around", "value": "space-around" },
+                  { "title": "space-between", "value": "space-between" },
+                  { "title": "space-evenly", "value": "space-evenly" }
+                ]
+              }
+            },
+            "defaultValue": "start"
+          },
+          {
+            "name": "size",
+            "title": {
+              "label": "间距大小",
+              "tip": "为数字时，是水平和垂直间距；为数组时，是 [水平间距, 垂直间距]"
+            },
+            "setter": {
+              "componentName": "MixedSetter",
+              "props": {
+                "setters": [
+                  {
+                    "componentName": "RadioGroupSetter",
+                    "props": {
+                      "options": [
+                        { "label": "small", "value": "small" },
+                        { "label": "medium", "value": "medium" },
+                        { "label": "large", "value": "large" }
+                      ]
+                    }
+                  },
+                  "NumberSetter"
+                ]
+              }
+            },
+            "defaultValue": "medium"
+          },
+          {
+            "name": "inline",
+            "title": "是否为行内元素",
+            "setter": "BoolSetter"
+          },
+          {
+            "name": "vertical",
+            "title": "是否垂直布局",
+            "setter": "BoolSetter"
+          },
+          {
+            "name": "wrap",
+            "title": "是否超出换行",
+            "setter": "BoolSetter"
+          },
+          {
+            "name": "item-style",
+            "title": "节点样式",
+            "setter": "StringSetter"
+          }
+        ]
+      }
+    },
+    {
+      "category": "基础组件",
+      "componentName": "KButton",
+      "npm": {
+        "package": "@knx/kui",
+        "version": "1.0.2",
+        "exportName": "KButton",
+        "destructuring": true
+      },
+      "props": [
+        {
+          "name": "children",
+          "propType": "string"
+        },
+        {
+          "name": "icon",
+          "propType": "string"
+        },
+        {
+          "name": "icon-placement",
+          "propType": "string"
+        },
+        {
+          "name": "text",
+          "propType": "bool"
+        },
+        {
+          "name": "link",
+          "propType": "bool"
+        },
+        {
+          "name": "color",
+          "propType": "string"
+        },
+        {
+          "name": "type",
+          "propType": "string"
+        },
+        {
+          "name": "size",
+          "propType": "string"
+        },
+        {
+          "name": "text-color",
+          "propType": "string"
+        },
+        {
+          "name": "dashed",
+          "propType": "bool"
+        },
+        {
+          "name": "secondary",
+          "propType": "bool"
+        },
+        {
+          "name": "circle",
+          "propType": "bool"
+        },
+        {
+          "name": "round",
+          "propType": "bool"
+        },
+        {
+          "name": "disabled",
+          "propType": "bool"
+        },
+        {
+          "name": "ghost",
+          "propType": "bool"
+        },
+        {
+          "name": "loading",
+          "propType": "bool"
+        },
+        {
+          "name": "strong",
+          "propType": "bool"
+        },
+        {
+          "name": "attr-type",
+          "propType": "string"
+        }
+      ],
+      "configure": {
+        "props": [
+          {
+            "title": "按钮功能",
+            "type": "group",
+            "extraProps": {
+              "display": "block"
+            },
+            "items": [
+              {
+                "name": "icon",
+                "title": "按钮图标",
+                "setter": {
+                  "componentName": "SelectSetter",
+                  "props": {
+                    "options": [
+                      { "title": "setting", "value": "setting" },
+                      { "title": "form", "value": "form" },
+                      { "title": "unlock", "value": "unlock" },
+                      { "title": "move", "value": "move" },
+                      { "title": "star", "value": "star" },
+                      { "title": "warning", "value": "warning" },
+                      { "title": "help", "value": "help" },
+                      { "title": "target-rect", "value": "target-rect" },
+                      { "title": "subtract-circle", "value": "subtract-circle" },
+                      { "title": "close-circle", "value": "close-circle" },
+                      { "title": "user", "value": "user" },
+                      { "title": "filter", "value": "filter" },
+                      { "title": "enlarge", "value": "enlarge" },
+                      { "title": "trophy", "value": "trophy" },
+                      { "title": "classification", "value": "classification" },
+                      { "title": "left", "value": "left" },
+                      { "title": "download", "value": "download" },
+                      { "title": "close", "value": "close" },
+                      { "title": "down", "value": "down" },
+                      { "title": "edit", "value": "edit" },
+                      { "title": "achievements", "value": "achievements" },
+                      { "title": "email", "value": "email" },
+                      { "title": "down-circle", "value": "down-circle" },
+                      { "title": "batch", "value": "batch" },
+                      { "title": "calendar", "value": "calendar" },
+                      { "title": "cry", "value": "cry" },
+                      { "title": "bell", "value": "bell" },
+                      { "title": "left-circle", "value": "left-circle" },
+                      { "title": "check", "value": "check" },
+                      { "title": "attachment", "value": "attachment" },
+                      { "title": "index", "value": "index" },
+                      { "title": "hotline", "value": "hotline" },
+                      { "title": "home", "value": "home" },
+                      { "title": "lock", "value": "lock" },
+                      { "title": "list", "value": "list" },
+                      { "title": "eye-close", "value": "eye-close" },
+                      { "title": "file-open", "value": "file-open" },
+                      { "title": "file-close", "value": "file-close" },
+                      { "title": "up", "value": "up" },
+                      { "title": "prompt", "value": "prompt" },
+                      { "title": "import", "value": "import" },
+                      { "title": "eye", "value": "eye" },
+                      { "title": "plus-circle", "value": "plus-circle" },
+                      { "title": "invisible", "value": "invisible" },
+                      { "title": "search", "value": "search" },
+                      { "title": "toggle-left", "value": "toggle-left" },
+                      { "title": "performance", "value": "performance" },
+                      { "title": "time", "value": "time" },
+                      { "title": "toggle-right", "value": "toggle-right" },
+                      { "title": "remove", "value": "remove" },
+                      { "title": "sorting", "value": "sorting" },
+                      { "title": "target", "value": "target" },
+                      { "title": "plus", "value": "plus" },
+                      { "title": "menu", "value": "menu" },
+                      { "title": "up-circle", "value": "up-circle" },
+                      { "title": "switch", "value": "switch" },
+                      { "title": "narrow", "value": "narrow" },
+                      { "title": "quote", "value": "quote" },
+                      { "title": "sucess", "value": "sucess" },
+                      { "title": "upload", "value": "upload" },
+                      { "title": "right", "value": "right" },
+                      { "title": "right-circle", "value": "right-circle" },
+                      { "title": "performance-setting", "value": "setting" },
+                      { "title": "rotate-left", "value": "rotate-left" },
+                      { "title": "smile", "value": "smile" },
+                      { "title": "rotate-right", "value": "rotate-right" },
+                      { "title": "refresh", "value": "refresh" },
+                      { "title": "fabulous", "value": "fabulous" },
+                      { "title": "message", "value": "message" }
+                    ]
+                  }
+                }
+              },
+              {
+                "name": "icon-placement",
+                "title": "图标位置",
+                "setter": {
+                  "componentName": "RadioGroupSetter",
+                  "props": {
+                    "options": [
+                      { "title": "left", "value": "left" },
+                      { "title": "right", "value": "right" }
+                    ]
+                  }
+                },
+                "defaultValue": "left"
+              },
+              {
+                "name": "children",
+                "title": "按钮内容",
+                "setter": "StringSetter"
+              },
+              {
+                "name": "disabled",
+                "title": "是否禁用",
+                "setter": "BoolSetter"
+              },
+              {
+                "name": "loading",
+                "title": "显示加载状态",
+                "setter": "BoolSetter"
+              },
+              {
+                "name": "attr-type",
+                "title": {
+                  "label": "按钮原生类型",
+                  "tip": "按钮的 DOM 的 type 属性"
+                },
+                "setter": {
+                  "componentName": "RadioGroupSetter",
+                  "props": {
+                    "options": [
+                      { "title": "button", "value": "button" },
+                      { "title": "submit", "value": "submit" },
+                      { "title": "reset", "value": "reset" }
+                    ]
+                  }
+                },
+                "defaultValue": "button"
+              }
+            ]
+          },
+          {
+            "title": "按钮样式",
+            "type": "group",
+            "extraProps": {
+              "display": "block"
+            },
+            "items": [
+              {
+                "name": "type",
+                "title": "按钮的类型",
+                "setter": {
+                  "componentName": "SelectSetter",
+                  "props": {
+                    "options": [
+                      { "title": "default", "value": "default" },
+                      { "title": "primary", "value": "primary" },
+                      { "title": "tertiary", "value": "tertiary" },
+                      { "title": "success", "value": "success" },
+                      { "title": "info", "value": "info" },
+                      { "title": "warning", "value": "warning" },
+                      { "title": "error", "value": "error" }
+                    ]
+                  }
+                },
+                "defaultValue": "default"
+              },
+              {
+                "name": "text",
+                "title": "文本按钮",
+                "setter": "BoolSetter"
+              },
+              {
+                "name": "link",
+                "title": "链接按钮",
+                "setter": "BoolSetter"
+              },
+              {
+                "name": "size",
+                "title": "按钮的尺寸",
+                "setter": {
+                  "componentName": "RadioGroupSetter",
+                  "props": {
+                    "options": [
+                      { "label": "tiny", "value": "tiny" },
+                      { "label": "small", "value": "small" },
+                      { "label": "medium", "value": "medium" },
+                      { "label": "large", "value": "large" }
+                    ]
+                  }
+                },
+                "defaultValue": "medium"
+              },
+              {
+                "name": "bordered",
+                "title": "显示边框",
+                "setter": "BoolSetter",
+                "defaultValue": true
+              },
+              {
+                "name": "circle",
+                "title": "是否为圆形",
+                "setter": "BoolSetter"
+              },
+              {
+                "name": "color",
+                "title": "按钮颜色",
+                "setter": "ColorSetter"
+              },
+              {
+                "name": "text-color",
+                "title": "按钮文本颜色",
+                "setter": "ColorSetter"
+              },
+              {
+                "name": "dashed",
+                "title": "虚线边框",
+                "setter": "BoolSetter"
+              },
+              {
+                "name": "ghost",
+                "title": "是否透明",
+                "setter": "BoolSetter"
+              },
+              {
+                "name": "round",
+                "title": "是否显示圆角",
+                "setter": "BoolSetter"
+              },
+              {
+                "name": "secondary",
+                "title": "是否是次要按钮",
+                "setter": "BoolSetter"
+              },
+              {
+                "name": "strong",
+                "title": "文字是否加粗",
+                "setter": "BoolSetter"
+              }
+            ]
+          }
+        ],
+        "supports": {
+          "style": true,
+          "loop": true,
+          "events": ["onClick"]
+        }
+      }
+    },
+    {
+      "category": "数据录入",
+      "title": "表单",
+      "componentName": "KForm",
+      "npm": {
+        "package": "@knx/kui",
+        "version": "1.0.2",
+        "exportName": "KForm",
+        "destructuring": true
+      },
+      "props": [
+        {
+          "name": "disabled",
+          "propType": "bool"
+        },
+        {
+          "name": "inline",
+          "propType": "bool"
+        },
+        {
+          "name": "label-width",
+          "propType": {
+            "type": "oneOfType",
+            "value": ["string", "number"]
+          }
+        },
+        {
+          "name": "label-align",
+          "propType": {
+            "type": "oneOf",
+            "value": ["left", "right"]
+          }
+        },
+        {
+          "name": "label-placement",
+          "propType": {
+            "type": "oneOf",
+            "value": ["left", "top"]
+          }
+        },
+        {
+          "name": "model",
+          "propType": "object"
+        },
+        {
+          "name": "rules",
+          "propType": "object"
+        },
+        {
+          "name": "show-feedback",
+          "propType": "bool"
+        },
+        {
+          "name": "show-label",
+          "propType": "bool"
+        },
+        {
+          "name": "show-require-mark",
+          "propType": "bool"
+        },
+        {
+          "name": "require-mark-placement",
+          "propType": {
+            "type": "oneOf",
+            "value": ["left", "right", "right-hanging"]
+          }
+        }
+      ],
+      "configure": {
+        "supports": {
+          "style": true,
+          "events": ["onSubmit"]
+        },
+        "component": {
+          "isContainer": true
+        },
+        "props": [
+          {
+            "name": "model",
+            "title": "表项值对象",
+            "setter": "ExpressionSetter"
+          },
+          {
+            "name": "rules",
+            "title": "表项值对象",
+            "setter": {
+              "componentName": "MixedSetter",
+              "props": {
+                "setters": ["ExpressionSetter", "JsonSetter"]
+              }
+            }
+          },
+          {
+            "name": "disabled",
+            "title": "是否禁用",
+            "setter": "BoolSetter"
+          },
+          {
+            "name": "inline",
+            "title": "行内表单",
+            "setter": "BoolSetter"
+          },
+          {
+            "name": "label-width",
+            "title": {
+              "label": "标签宽度",
+              "tip": "在 label-placement 是 'left' 的时候可能会有用，'auto' 意味着 label width 会被自动调整"
+            },
+            "setter": {
+              "componentName": "MixedSetter",
+              "props": {
+                "setters": ["StringSetter", "NumberSetter"]
+              }
+            },
+            "defaultValue": "auto"
+          },
+          {
+            "name": "label-align",
+            "title": "标签文本对齐方式",
+            "setter": {
+              "componentName": "RadioGroupSetter",
+              "props": {
+                "options": [
+                  { "title": "left", "value": "left" },
+                  { "title": "right", "value": "right" }
+                ]
+              }
+            },
+            "defaultValue": "left"
+          },
+          {
+            "name": "label-placement",
+            "title": "标签位置",
+            "setter": {
+              "componentName": "RadioGroupSetter",
+              "props": {
+                "options": [
+                  { "title": "left", "value": "left" },
+                  { "title": "top", "value": "top" }
+                ]
+              }
+            },
+            "defaultValue": "left"
+          },
+          {
+            "name": "show-feedback",
+            "title": "展示校验反馈",
+            "setter": "BoolSetter"
+          },
+          {
+            "name": "show-label",
+            "title": "展示标签",
+            "setter": "BoolSetter"
+          },
+          {
+            "name": "show-require-mark",
+            "title": "展示必填星号",
+            "setter": "BoolSetter"
+          },
+          {
+            "name": "require-mark-placement",
+            "title": "星号位置",
+            "setter": {
+              "componentName": "RadioGroupSetter",
+              "props": {
+                "options": [
+                  { "title": "left", "value": "left" },
+                  { "title": "right", "value": "right" },
+                  { "title": "right-hanging", "value": "right-hanging" }
+                ]
+              }
+            },
+            "defaultValue": "right"
+          }
+        ]
+      }
+    },
+    {
+      "title": "表单项",
+      "category": "数据录入",
+      "componentName": "KFormItem",
+      "npm": {
+        "package": "@knx/kui",
+        "version": "1.0.2",
+        "exportName": "KFormItem",
+        "destructuring": true
+      },
+      "props": [
+        {
+          "name": "feedback",
+          "propType": "string"
+        },
+        {
+          "name": "label",
+          "propType": "string"
+        },
+        {
+          "name": "label-align",
+          "propType": "string"
+        },
+        {
+          "name": "label-width",
+          "propType": {
+            "type": "oneOfType",
+            "value": ["string", "number"]
+          }
+        },
+        {
+          "name": "label-placement",
+          "propType": "string"
+        },
+        {
+          "name": "label-style",
+          "propType": {
+            "type": "oneOfType",
+            "value": ["string", "object"]
+          }
+        },
+        {
+          "name": "path",
+          "propType": "string"
+        },
+        {
+          "name": "rule",
+          "propType": "array"
+        },
+        {
+          "name": "rule-path",
+          "propType": "string"
+        },
+        {
+          "name": "show-feedback",
+          "propType": "bool"
+        },
+        {
+          "name": "show-label",
+          "propType": "bool"
+        },
+        {
+          "name": "show-require-mark",
+          "propType": "bool"
+        },
+        {
+          "name": "require-mark-placement",
+          "propType": "string"
+        },
+        {
+          "name": "size",
+          "propType": "string"
+        },
+        {
+          "name": "validation-status",
+          "propType": "string"
+        }
+      ],
+      "configure": {
+        "component": {
+          "isContainer": true
+        },
+        "supports": {
+          "loop": true,
+          "style": true
+        },
+        "props": [
+          {
+            "name": "path",
+            "title": "值路径",
+            "setter": "StringSetter"
+          },
+          {
+            "name": "size",
+            "title": "尺寸",
+            "setter": {
+              "componentName": "RadioGroupSetter",
+              "props": {
+                "options": [
+                  { "title": "small", "value": "small" },
+                  { "title": "medium", "value": "medium" },
+                  { "title": "large", "value": "large" }
+                ]
+              }
+            },
+            "defaultValue": "medium"
+          },
+          {
+            "type": "group",
+            "title": "标签设置",
+            "extraProps": {
+              "display": "block"
+            },
+            "items": [
+              {
+                "name": "label",
+                "title": "标签内容",
+                "setter": "StringSetter"
+              },
+              {
+                "name": "show-label",
+                "title": "显示标签",
+                "setter": "BoolSetter",
+                "defaultValue": true
+              },
+              {
+                "name": "label-align",
+                "title": "文本对齐方式",
+                "setter": {
+                  "componentName": "RadioGroupSetter",
+                  "props": {
+                    "options": [
+                      { "title": "left", "value": "left" },
+                      { "title": "right", "value": "right" }
+                    ]
+                  }
+                },
+                "defaultValue": "left"
+              },
+              {
+                "name": "label-width",
+                "title": {
+                  "label": "标签宽度",
+                  "tip": "在 label-placement 是 'left' 的时候可能会有用，'auto' 意味着 label width 会被自动调整"
+                },
+                "setter": {
+                  "componentName": "MixedSetter",
+                  "props": {
+                    "setters": ["StringSetter", "NumberSetter"]
+                  }
+                },
+                "defaultValue": "auto"
+              },
+              {
+                "name": "label-placement",
+                "title": "标签位置",
+                "setter": {
+                  "componentName": "RadioGroupSetter",
+                  "props": {
+                    "options": [
+                      { "title": "left", "value": "left" },
+                      { "title": "top", "value": "top" }
+                    ]
+                  }
+                },
+                "defaultValue": "left"
+              },
+              {
+                "name": "label-style",
+                "title": "标签样式",
+                "setter": {
+                  "componentName": "MixedSetter",
+                  "props": {
+                    "setters": ["StringSetter", "JsonSetter"]
+                  }
+                }
+              },
+              {
+                "name": "show-require-mark",
+                "title": "显示必填星号",
+                "setter": "BoolSetter"
+              },
+              {
+                "name": "require-mark-placement",
+                "title": "必填星号位置",
+                "setter": {
+                  "componentName": "RadioGroupSetter",
+                  "props": {
+                    "options": [
+                      { "title": "left", "value": "left" },
+                      { "title": "right", "value": "right" },
+                      { "title": "right-hanging", "value": "right-hanging" }
+                    ]
+                  }
+                },
+                "defaultValue": "right"
+              }
+            ]
+          },
+          {
+            "type": "group",
+            "title": "校验设置",
+            "extraProps": {
+              "display": "block"
+            },
+            "items": [
+              {
+                "name": "rule",
+                "title": "校验规则",
+                "setter": {
+                  "componentName": "MixedSetter",
+                  "props": {
+                    "setters": ["ExpressionSetter", "JsonSetter"]
+                  }
+                }
+              },
+              {
+                "name": "feedback",
+                "title": "校验错误信息",
+                "setter": "StringSetter"
+              },
+              {
+                "name": "show-feedback",
+                "title": {
+                  "label": "显示错误信息",
+                  "tip": "当校验失败时，是否显示错误信息"
+                },
+                "setter": "BoolSetter"
+              },
+              {
+                "name": "rule-path",
+                "title": "规则路径",
+                "setter": "StringSetter"
+              },
+              {
+                "name": "validation-status",
+                "title": "校验状态",
+                "setter": {
+                  "componentName": "MixedSetter",
+                  "props": {
+                    "setters": [
+                      {
+                        "componentName": "RadioGroupSetter",
+                        "props": {
+                          "options": [
+                            { "title": "error", "value": "error" },
+                            { "title": "success", "value": "success" },
+                            { "title": "warning", "value": "warning" }
+                          ]
+                        }
+                      },
+                      "ExpressionSetter",
+                      "StringSetter"
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "category": "数据录入",
+      "title": "文本输入",
+      "componentName": "KInput",
+      "npm": {
+        "package": "@knx/kui",
+        "version": "1.0.2",
+        "exportName": "KInput",
+        "destructuring": true
+      },
+      "props": [
+        {
+          "name": "autofocus",
+          "propType": "bool"
+        },
+        {
+          "name": "disabled",
+          "propType": "bool"
+        },
+        {
+          "name": "readonly",
+          "propType": "bool"
+        },
+        {
+          "name": "clearable",
+          "propType": "bool"
+        },
+        {
+          "name": "type",
+          "propType": {
+            "type": "oneOf",
+            "value": ["text", "password", "textarea"]
+          }
+        },
+        {
+          "name": "status",
+          "propType": {
+            "type": "oneOf",
+            "value": ["success", "warning", "error"]
+          }
+        },
+        {
+          "name": "placeholder",
+          "propType": "string"
+        },
+        {
+          "name": "value",
+          "propType": "string"
+        },
+        {
+          "name": "show-password-on",
+          "propType": {
+            "type": "oneOf",
+            "value": ["click", "mousedown"]
+          }
+        }
+      ],
+      "configure": {
+        "props": [
+          {
+            "name": "placeholder",
+            "title": "输入占位符",
+            "setter": "StringSetter"
+          },
+          {
+            "name": "v-model:value",
+            "title": "输入值",
+            "setter": "ExpressionSetter"
+          },
+          {
+            "name": "type",
+            "title": "输入框类型",
+            "setter": {
+              "componentName": "RadioGroupSetter",
+              "props": {
+                "options": [
+                  { "title": "text", "value": "text" },
+                  { "title": "password", "value": "password" },
+                  { "title": "textarea", "value": "textarea" }
+                ]
+              }
+            }
+          },
+          {
+            "name": "autofocus",
+            "title": "自动获取焦点",
+            "setter": "BoolSetter"
+          },
+          {
+            "name": "disabled",
+            "title": "是否禁用",
+            "setter": "BoolSetter"
+          },
+          {
+            "name": "readonly",
+            "title": "是否只读",
+            "setter": "BoolSetter"
+          },
+          {
+            "name": "clearable",
+            "title": "是否可清空",
+            "setter": "BoolSetter"
+          },
+          {
+            "name": "show-password-on",
+            "title": "显示密码的时机",
+            "setter": {
+              "componentName": "RadioGroupSetter",
+              "props": {
+                "options": [
+                  { "title": "click", "value": "click" },
+                  { "title": "mousedown", "value": "mousedown" }
+                ]
+              }
+            },
+            "defaultValue": "click"
+          }
+        ],
+        "supports": {
+          "events": [
+            "onMousedown",
+            "onKeydown",
+            "onKeydown",
+            "onKeyup",
+            "onInput",
+            "onFocus",
+            "onBlur",
+            "onClear",
+            "onClick",
+            "onChange",
+            "onUpdateValue"
+          ],
+          "loop": true,
+          "style": true
         }
       }
     }
   ],
   "componentList": [
     {
-      "title": "基础",
-      "children": []
-    },
-    {
-      "title": "排印",
+      "title": "基础组件",
       "children": [
         {
           "title": "文本",
-          "library": "naive-ui",
+          "library": "@knx/kui",
           "snippets": [
             {
               "title": "文本",
               "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/text.svg",
               "schema": {
-                "componentName": "NText",
+                "componentName": "KText",
                 "props": {
-                  "children": "标题标题"
+                  "children": "文本内容"
                 }
               }
             }
           ]
-        }
-      ]
-    },
-    {
-      "title": "基础组件",
-      "children": [
+        },
         {
-          "componentName": "NAvatar",
-          "library": "naive-ui",
+          "componentName": "KAvatar",
+          "library": "@knx/kui",
           "title": "头像",
           "snippets": [
             {
               "title": "头像",
               "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/avatar.png",
               "schema": {
-                "componentName": "NAvatar",
+                "componentName": "KAvatar",
                 "props": {
                   "circle": true,
                   "round": false,
@@ -468,7 +1673,7 @@
         },
         {
           "componentName": "KIcon",
-          "library": "unplugin-vue-iconfont",
+          "library": "@knx/kui",
           "title": "图标",
           "snippets": [
             {
@@ -476,8 +1681,24 @@
               "schema": {
                 "componentName": "KIcon",
                 "props": {
-                  "size": 40,
                   "name": "fabulous"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "componentName": "KButton",
+          "library": "@knx/kui",
+          "title": "按钮",
+          "snippets": [
+            {
+              "title": "按钮",
+              "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/button.png",
+              "schema": {
+                "componentName": "KButton",
+                "props": {
+                  "children": "按钮"
                 }
               }
             }
@@ -489,22 +1710,102 @@
       "title": "布局组件",
       "children": [
         {
-          "componentName": "NCard",
-          "library": "naive-ui",
+          "componentName": "KCard",
+          "library": "@knx/kui",
           "snippets": [
             {
               "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/card.png",
               "title": "卡片",
               "schema": {
-                "componentName": "NCard",
-                "props": {
-                  "header": {
-                    "type": "JSSlot",
-                    "title": "header",
-                    "value": []
-                  }
-                },
+                "componentName": "KCard",
                 "children": []
+              }
+            }
+          ]
+        },
+        {
+          "componentName": "KSpace",
+          "library": "@knx/kui",
+          "snippets": [
+            {
+              "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/space.svg",
+              "title": "间距",
+              "schema": {
+                "componentName": "KSpace",
+                "children": []
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "信息输入",
+      "children": [
+        {
+          "componentName": "KForm",
+          "library": "@knx/kui",
+          "snippets": [
+            {
+              "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/form.png",
+              "title": "表单容器",
+              "schema": {
+                "componentName": "KForm",
+                "props": {
+                  "label-width": 80
+                },
+                "children": [
+                  {
+                    "componentName": "KFormItem",
+                    "props": {
+                      "label": "用户名"
+                    },
+                    "children": [
+                      {
+                        "componentName": "KInput",
+                        "props": {
+                          "placeholder": "请输入用户名"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "componentName": "KFormItem",
+                    "props": {
+                      "label": "密码"
+                    },
+                    "children": [
+                      {
+                        "componentName": "KInput",
+                        "props": {
+                          "type": "password",
+                          "placeholder": "请输入密码"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "componentName": "KFormItem",
+          "library": "@knx/kui",
+          "snippets": [
+            {
+              "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/input.png",
+              "title": "文本输入",
+              "schema": {
+                "componentName": "KFormItem",
+                "props": {
+                  "label": "标签"
+                },
+                "children": [
+                  {
+                    "componentName": "KInput"
+                  }
+                ]
               }
             }
           ]

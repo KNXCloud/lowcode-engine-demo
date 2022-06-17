@@ -1,3 +1,7 @@
 {
-  "info": "Hello AliLowCode!!11111111111"
+  "info": "Hello AliLowCode!!11111111111",
+  "user": {
+    "username": "knight.chen",
+    "password": "abc123_"
+  }
 }
