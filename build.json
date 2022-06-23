@@ -4,7 +4,7 @@
   },
   "publicPath": "/",
   "externals": {
-    "@alilc/next": "var window.Next",
+    "@alifd/next": "var window.Next",
     "@alilc/lowcode-engine": "var window.AliLowCodeEngine",
     "@alilc/lowcode-engine-ext": "var window.AliLowCodeEngineExt",
     "@alilc/lowcode-editor-core": "var window.AliLowCodeEngine.common.editorCabin",
