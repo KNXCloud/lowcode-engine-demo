@@ -7,12 +7,10 @@
       "library": "Vue"
     },
     {
-      "package": "@knx/kui",
-      "version": "1.0.2",
-      "urls": [
-        "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/kui/v1.1.0/kui.min.js"
-      ],
-      "library": "Kui"
+      "package": "naive-ui",
+      "version": "2.30.6",
+      "urls": ["https://unpkg.com/naive-ui@2.30.6/dist/index.prod.js"],
+      "library": "naive"
     }
   ],
   "components": [
@@ -51,11 +49,11 @@
     {
       "title": "头像",
       "category": "基础组件",
-      "componentName": "KAvatar",
+      "componentName": "NAvatar",
       "npm": {
-        "package": "@knx/kui",
-        "version": "1.0.2",
-        "exportName": "KAvatar",
+        "package": "naive-ui",
+        "version": "2.30.6",
+        "exportName": "NAvatar",
         "destructuring": true
       },
       "props": [
@@ -138,11 +136,11 @@
     {
       "title": "卡片",
       "category": "布局组件",
-      "componentName": "KCard",
+      "componentName": "NCard",
       "npm": {
-        "package": "@knx/kui",
-        "version": "1.0.2",
-        "exportName": "KCard",
+        "package": "naive-ui",
+        "version": "2.30.6",
+        "exportName": "NCard",
         "destructuring": true
       },
       "props": [
@@ -341,11 +339,11 @@
     {
       "title": "文本",
       "category": "基础组件",
-      "componentName": "KText",
+      "componentName": "NText",
       "npm": {
-        "package": "@knx/kui",
-        "version": "1.0.2",
-        "exportName": "KText",
+        "package": "naive-ui",
+        "version": "2.30.6",
+        "exportName": "NText",
         "destructuring": true
       },
       "props": [
@@ -467,146 +465,23 @@
       }
     },
     {
-      "title": "图标",
-      "category": "基础组件",
-      "componentName": "KIcon",
-      "npm": {
-        "package": "@knx/kui",
-        "version": "1.0.2",
-        "exportName": "KIcon",
-        "destructuring": true
-      },
-      "props": [
-        {
-          "name": "color",
-          "propType": "string"
-        },
-        {
-          "name": "size",
-          "propType": {
-            "type": "oneOfType",
-            "value": ["number", "string"]
-          }
-        },
-        {
-          "name": "name",
-          "title": "图标名称",
-          "propType": {
-            "type": "oneOf",
-            "value": [
-              "setting",
-              "form",
-              "unlock",
-              "move",
-              "star",
-              "warning",
-              "help",
-              "target-rect",
-              "subtract-circle",
-              "close-circle",
-              "user",
-              "filter",
-              "enlarge",
-              "trophy",
-              "classification",
-              "left",
-              "download",
-              "close",
-              "down",
-              "edit",
-              "achievements",
-              "email",
-              "down-circle",
-              "batch",
-              "calendar",
-              "cry",
-              "bell",
-              "left-circle",
-              "check",
-              "attachment",
-              "index",
-              "hotline",
-              "home",
-              "lock",
-              "list",
-              "eye-close",
-              "file-open",
-              "file-close",
-              "up",
-              "prompt",
-              "import",
-              "eye",
-              "plus-circle",
-              "invisible",
-              "search",
-              "toggle-left",
-              "performance",
-              "time",
-              "toggle-right",
-              "remove",
-              "sorting",
-              "target",
-              "plus",
-              "menu",
-              "up-circle",
-              "switch",
-              "narrow",
-              "quote",
-              "sucess",
-              "upload",
-              "right",
-              "right-circle",
-              "performance-setting",
-              "rotate-left",
-              "smile",
-              "rotate-right",
-              "refresh",
-              "fabulous",
-              "message"
-            ]
-          }
-        }
-      ],
-      "configure": {
-        "supports": {
-          "style": true
-        },
-        "props": {
-          "isExtends": true,
-          "override": [
-            {
-              "name": "color",
-              "title": "图标颜色",
-              "setter": "ColorSetter"
-            },
-            {
-              "name": "size",
-              "title": "图标大小",
-              "setter": {
-                "componentName": "MixedSetter",
-                "props": {
-                  "setters": ["NumberSetter", "StringSetter"]
-                }
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
       "title": "间距",
       "category": "布局组件",
-      "componentName": "KSpace",
+      "componentName": "NSpace",
       "npm": {
-        "package": "@knx/kui",
-        "version": "1.0.2",
-        "exportName": "KSpace",
+        "package": "naive-ui",
+        "version": "2.30.6",
+        "exportName": "NSpace",
         "destructuring": true
       },
       "props": [
         {
           "name": "align",
           "propType": "string"
+        },
+        {
+          "name": "wrap-item",
+          "propType": "bool"
         },
         {
           "name": "justify",
@@ -703,6 +578,11 @@
             "defaultValue": "medium"
           },
           {
+            "name": "wrap-item",
+            "title": "是否包裹元素",
+            "setter": "BoolSetter"
+          },
+          {
             "name": "inline",
             "title": "是否为行内元素",
             "setter": "BoolSetter"
@@ -727,11 +607,11 @@
     },
     {
       "category": "基础组件",
-      "componentName": "KButton",
+      "componentName": "NButton",
       "npm": {
-        "package": "@knx/kui",
-        "version": "1.0.2",
-        "exportName": "KButton",
+        "package": "naive-ui",
+        "version": "2.30.6",
+        "exportName": "NButton",
         "destructuring": true
       },
       "props": [
@@ -740,19 +620,7 @@
           "propType": "string"
         },
         {
-          "name": "icon",
-          "propType": "string"
-        },
-        {
-          "name": "icon-placement",
-          "propType": "string"
-        },
-        {
           "name": "text",
-          "propType": "bool"
-        },
-        {
-          "name": "link",
           "propType": "bool"
         },
         {
@@ -818,100 +686,6 @@
             },
             "items": [
               {
-                "name": "icon",
-                "title": "按钮图标",
-                "setter": {
-                  "componentName": "SelectSetter",
-                  "props": {
-                    "options": [
-                      { "title": "setting", "value": "setting" },
-                      { "title": "form", "value": "form" },
-                      { "title": "unlock", "value": "unlock" },
-                      { "title": "move", "value": "move" },
-                      { "title": "star", "value": "star" },
-                      { "title": "warning", "value": "warning" },
-                      { "title": "help", "value": "help" },
-                      { "title": "target-rect", "value": "target-rect" },
-                      { "title": "subtract-circle", "value": "subtract-circle" },
-                      { "title": "close-circle", "value": "close-circle" },
-                      { "title": "user", "value": "user" },
-                      { "title": "filter", "value": "filter" },
-                      { "title": "enlarge", "value": "enlarge" },
-                      { "title": "trophy", "value": "trophy" },
-                      { "title": "classification", "value": "classification" },
-                      { "title": "left", "value": "left" },
-                      { "title": "download", "value": "download" },
-                      { "title": "close", "value": "close" },
-                      { "title": "down", "value": "down" },
-                      { "title": "edit", "value": "edit" },
-                      { "title": "achievements", "value": "achievements" },
-                      { "title": "email", "value": "email" },
-                      { "title": "down-circle", "value": "down-circle" },
-                      { "title": "batch", "value": "batch" },
-                      { "title": "calendar", "value": "calendar" },
-                      { "title": "cry", "value": "cry" },
-                      { "title": "bell", "value": "bell" },
-                      { "title": "left-circle", "value": "left-circle" },
-                      { "title": "check", "value": "check" },
-                      { "title": "attachment", "value": "attachment" },
-                      { "title": "index", "value": "index" },
-                      { "title": "hotline", "value": "hotline" },
-                      { "title": "home", "value": "home" },
-                      { "title": "lock", "value": "lock" },
-                      { "title": "list", "value": "list" },
-                      { "title": "eye-close", "value": "eye-close" },
-                      { "title": "file-open", "value": "file-open" },
-                      { "title": "file-close", "value": "file-close" },
-                      { "title": "up", "value": "up" },
-                      { "title": "prompt", "value": "prompt" },
-                      { "title": "import", "value": "import" },
-                      { "title": "eye", "value": "eye" },
-                      { "title": "plus-circle", "value": "plus-circle" },
-                      { "title": "invisible", "value": "invisible" },
-                      { "title": "search", "value": "search" },
-                      { "title": "toggle-left", "value": "toggle-left" },
-                      { "title": "performance", "value": "performance" },
-                      { "title": "time", "value": "time" },
-                      { "title": "toggle-right", "value": "toggle-right" },
-                      { "title": "remove", "value": "remove" },
-                      { "title": "sorting", "value": "sorting" },
-                      { "title": "target", "value": "target" },
-                      { "title": "plus", "value": "plus" },
-                      { "title": "menu", "value": "menu" },
-                      { "title": "up-circle", "value": "up-circle" },
-                      { "title": "switch", "value": "switch" },
-                      { "title": "narrow", "value": "narrow" },
-                      { "title": "quote", "value": "quote" },
-                      { "title": "sucess", "value": "sucess" },
-                      { "title": "upload", "value": "upload" },
-                      { "title": "right", "value": "right" },
-                      { "title": "right-circle", "value": "right-circle" },
-                      { "title": "performance-setting", "value": "setting" },
-                      { "title": "rotate-left", "value": "rotate-left" },
-                      { "title": "smile", "value": "smile" },
-                      { "title": "rotate-right", "value": "rotate-right" },
-                      { "title": "refresh", "value": "refresh" },
-                      { "title": "fabulous", "value": "fabulous" },
-                      { "title": "message", "value": "message" }
-                    ]
-                  }
-                }
-              },
-              {
-                "name": "icon-placement",
-                "title": "图标位置",
-                "setter": {
-                  "componentName": "RadioGroupSetter",
-                  "props": {
-                    "options": [
-                      { "title": "left", "value": "left" },
-                      { "title": "right", "value": "right" }
-                    ]
-                  }
-                },
-                "defaultValue": "left"
-              },
-              {
                 "name": "children",
                 "title": "按钮内容",
                 "setter": "StringSetter"
@@ -961,8 +735,8 @@
                   "props": {
                     "options": [
                       { "title": "default", "value": "default" },
-                      { "title": "primary", "value": "primary" },
                       { "title": "tertiary", "value": "tertiary" },
+                      { "title": "primary", "value": "primary" },
                       { "title": "success", "value": "success" },
                       { "title": "info", "value": "info" },
                       { "title": "warning", "value": "warning" },
@@ -1057,11 +831,11 @@
     {
       "category": "数据录入",
       "title": "表单",
-      "componentName": "KForm",
+      "componentName": "NForm",
       "npm": {
-        "package": "@knx/kui",
-        "version": "1.0.2",
-        "exportName": "KForm",
+        "package": "naive-ui",
+        "version": "2.30.6",
+        "exportName": "NForm",
         "destructuring": true
       },
       "props": [
@@ -1234,11 +1008,11 @@
     {
       "title": "表单项",
       "category": "数据录入",
-      "componentName": "KFormItem",
+      "componentName": "NFormItem",
       "npm": {
-        "package": "@knx/kui",
-        "version": "1.0.2",
-        "exportName": "KFormItem",
+        "package": "naive-ui",
+        "version": "2.30.6",
+        "exportName": "NFormItem",
         "destructuring": true
       },
       "props": [
@@ -1496,11 +1270,11 @@
     {
       "category": "数据录入",
       "title": "文本输入",
-      "componentName": "KInput",
+      "componentName": "NInput",
       "npm": {
-        "package": "@knx/kui",
-        "version": "1.0.2",
-        "exportName": "KInput",
+        "package": "naive-ui",
+        "version": "2.30.6",
+        "exportName": "NInput",
         "destructuring": true
       },
       "props": [
@@ -1637,13 +1411,13 @@
       "children": [
         {
           "title": "文本",
-          "library": "@knx/kui",
+          "library": "naive-ui",
           "snippets": [
             {
               "title": "文本",
               "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/text.svg",
               "schema": {
-                "componentName": "KText",
+                "componentName": "NText",
                 "props": {
                   "children": "文本内容"
                 }
@@ -1652,15 +1426,15 @@
           ]
         },
         {
-          "componentName": "KAvatar",
-          "library": "@knx/kui",
+          "componentName": "NAvatar",
+          "library": "naive-ui",
           "title": "头像",
           "snippets": [
             {
               "title": "头像",
               "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/avatar.png",
               "schema": {
-                "componentName": "KAvatar",
+                "componentName": "NAvatar",
                 "props": {
                   "circle": true,
                   "round": false,
@@ -1672,31 +1446,15 @@
           ]
         },
         {
-          "componentName": "KIcon",
-          "library": "@knx/kui",
-          "title": "图标",
-          "snippets": [
-            {
-              "title": "图标",
-              "schema": {
-                "componentName": "KIcon",
-                "props": {
-                  "name": "fabulous"
-                }
-              }
-            }
-          ]
-        },
-        {
-          "componentName": "KButton",
-          "library": "@knx/kui",
+          "componentName": "NButton",
+          "library": "naive-ui",
           "title": "按钮",
           "snippets": [
             {
               "title": "按钮",
               "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/button.png",
               "schema": {
-                "componentName": "KButton",
+                "componentName": "NButton",
                 "props": {
                   "children": "按钮"
                 }
@@ -1710,28 +1468,28 @@
       "title": "布局组件",
       "children": [
         {
-          "componentName": "KCard",
-          "library": "@knx/kui",
+          "componentName": "NCard",
+          "library": "naive-ui",
           "snippets": [
             {
               "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/card.png",
               "title": "卡片",
               "schema": {
-                "componentName": "KCard",
+                "componentName": "NCard",
                 "children": []
               }
             }
           ]
         },
         {
-          "componentName": "KSpace",
-          "library": "@knx/kui",
+          "componentName": "NSpace",
+          "library": "naive-ui",
           "snippets": [
             {
               "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/space.svg",
               "title": "间距",
               "schema": {
-                "componentName": "KSpace",
+                "componentName": "NSpace",
                 "children": []
               }
             }
@@ -1743,26 +1501,26 @@
       "title": "信息输入",
       "children": [
         {
-          "componentName": "KForm",
-          "library": "@knx/kui",
+          "componentName": "NForm",
+          "library": "naive-ui",
           "snippets": [
             {
               "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/form.png",
               "title": "表单容器",
               "schema": {
-                "componentName": "KForm",
+                "componentName": "NForm",
                 "props": {
                   "label-width": 80
                 },
                 "children": [
                   {
-                    "componentName": "KFormItem",
+                    "componentName": "NFormItem",
                     "props": {
                       "label": "用户名"
                     },
                     "children": [
                       {
-                        "componentName": "KInput",
+                        "componentName": "NInput",
                         "props": {
                           "placeholder": "请输入用户名"
                         }
@@ -1770,13 +1528,13 @@
                     ]
                   },
                   {
-                    "componentName": "KFormItem",
+                    "componentName": "NFormItem",
                     "props": {
                       "label": "密码"
                     },
                     "children": [
                       {
-                        "componentName": "KInput",
+                        "componentName": "NInput",
                         "props": {
                           "type": "password",
                           "placeholder": "请输入密码"
@@ -1790,20 +1548,20 @@
           ]
         },
         {
-          "componentName": "KFormItem",
-          "library": "@knx/kui",
+          "componentName": "NFormItem",
+          "library": "naive-ui",
           "snippets": [
             {
               "screenshot": "https://helios-allpublic-1257616148.cos.ap-shanghai.myqcloud.com/img/input.png",
               "title": "文本输入",
               "schema": {
-                "componentName": "KFormItem",
+                "componentName": "NFormItem",
                 "props": {
                   "label": "标签"
                 },
                 "children": [
                   {
-                    "componentName": "KInput"
+                    "componentName": "NInput"
                   }
                 ]
               }

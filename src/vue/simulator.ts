@@ -1,6 +1,10 @@
 import simulator, { vueRendererConfig } from '@knxcloud/lowcode-vue-simulator-renderer';
-import { message } from '@knx/kui';
-import { ConfigProvider } from './config-provider';
+import { createDiscreteApi } from 'naive-ui';
+import { ConfigProvider, configProviderProps } from './config-provider';
+
+const { message } = createDiscreteApi(['message'], {
+  configProviderProps,
+});
 
 simulator.app.config.globalProperties.$message = message;
 

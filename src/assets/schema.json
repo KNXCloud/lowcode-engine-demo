@@ -103,7 +103,7 @@
   "conditionGroup": "",
   "children": [
     {
-      "componentName": "KCard",
+      "componentName": "NCard",
       "id": "node_ocl4goj8tm1",
       "props": {
         "segmented": {
@@ -115,7 +115,7 @@
           "type": "JSSlot",
           "value": [
             {
-              "componentName": "KText",
+              "componentName": "NText",
               "id": "node_ocl4goj8tm3",
               "props": {
                 "children": "用户登录",
@@ -139,7 +139,7 @@
       "conditionGroup": "",
       "children": [
         {
-          "componentName": "KForm",
+          "componentName": "NForm",
           "id": "node_ocl4gmvfwx1",
           "props": {
             "label-width": 80,
@@ -181,7 +181,7 @@
           "conditionGroup": "",
           "children": [
             {
-              "componentName": "KFormItem",
+              "componentName": "NFormItem",
               "id": "node_ocl4i3antp2",
               "props": {
                 "label": "用户名",
@@ -206,7 +206,7 @@
               "conditionGroup": "",
               "children": [
                 {
-                  "componentName": "KInput",
+                  "componentName": "NInput",
                   "id": "node_ocl4i3antp3",
                   "props": {
                     "placeholder": "请输入用户名",
@@ -225,7 +225,7 @@
               ]
             },
             {
-              "componentName": "KFormItem",
+              "componentName": "NFormItem",
               "id": "node_ocl4i3antp4",
               "props": {
                 "label": "密码",
@@ -249,7 +249,7 @@
               "conditionGroup": "",
               "children": [
                 {
-                  "componentName": "KInput",
+                  "componentName": "NInput",
                   "id": "node_ocl4i3antp5",
                   "props": {
                     "placeholder": "请输入密码",
@@ -269,7 +269,7 @@
               ]
             },
             {
-              "componentName": "KSpace",
+              "componentName": "NSpace",
               "id": "node_ocl4goj8tm4",
               "props": {
                 "align": "start",
@@ -283,7 +283,7 @@
               "conditionGroup": "",
               "children": [
                 {
-                  "componentName": "KButton",
+                  "componentName": "NButton",
                   "id": "node_ocl4goj8tm6",
                   "props": {
                     "children": "登录",
@@ -300,7 +300,7 @@
                   "conditionGroup": ""
                 },
                 {
-                  "componentName": "KButton",
+                  "componentName": "NButton",
                   "id": "node_ocl4goj8tm5",
                   "props": {
                     "children": "重置",

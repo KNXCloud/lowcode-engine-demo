@@ -1,17 +1,17 @@
 import { injectComponents } from '@alilc/lowcode-plugin-inject';
-import { message } from '@knx/kui';
+import { createDiscreteApi } from 'naive-ui';
 import { buildComponents } from '@knxcloud/lowcode-utils';
 import VueRenderer, { config } from '@knxcloud/lowcode-vue-renderer';
 import { NSpin } from 'naive-ui';
 import { defineComponent, onMounted, reactive, h, createApp } from 'vue';
-import { ConfigProvider } from './config-provider';
+import { ConfigProvider, configProviderProps } from './config-provider';
 
 config.setConfigProvider(ConfigProvider);
 
 const init = async () => {
-  const packages = JSON.parse(window.localStorage.getItem('packages') || '{}');
+  const packages = JSON.parse(window.localStorage.getItem('packages') || '[]');
   const projectSchema = JSON.parse(window.localStorage.getItem('projectSchema') || '{}');
-  const { componentsMap: componentsMapArray, componentsTree } = projectSchema;
+  const { componentsMap: componentsMapArray = [], componentsTree = [] } = projectSchema;
 
   const componentsMap: any = {};
   componentsMapArray.forEach((component: any) => {
@@ -48,6 +48,10 @@ const Preview = defineComponent(() => {
       }),
     ]);
   };
+});
+
+const { message } = createDiscreteApi(['message'], {
+  configProviderProps,
 });
 
 const app = createApp(Preview);
