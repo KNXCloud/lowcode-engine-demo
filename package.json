@@ -11,9 +11,9 @@
     "@alilc/lowcode-plugin-schema": "^1.0.1",
     "@alilc/lowcode-plugin-undo-redo": "^1.0.0",
     "@alilc/lowcode-types": "^1.0.10",
-    "@knxcloud/lowcode-utils": "^1.1.1",
-    "@knxcloud/lowcode-vue-renderer": "^1.1.1",
-    "@knxcloud/lowcode-vue-simulator-renderer": "^1.1.1"
+    "@knxcloud/lowcode-utils": "^1.1.2",
+    "@knxcloud/lowcode-vue-renderer": "^1.1.2",
+    "@knxcloud/lowcode-vue-simulator-renderer": "^1.1.2"
   },
   "devDependencies": {
     "@alib/build-scripts": "^0.1.32",
