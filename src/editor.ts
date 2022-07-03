@@ -1,10 +1,10 @@
 import Inject from '@alilc/lowcode-plugin-inject';
-import { init, plugins } from '@alilc/lowcode-engine';
+import { init, plugins, project } from '@alilc/lowcode-engine';
 import UndoRedoPlugin from '@alilc/lowcode-plugin-undo-redo';
 import SchemaPlugin from '@alilc/lowcode-plugin-schema';
-import { EngineOptions } from '@alilc/lowcode-editor-core';
 import DataSource from '@alilc/lowcode-plugin-datasource-pane';
 import CodeEditor from '@alilc/lowcode-plugin-code-editor';
+import { setupHostEnvironment } from '@knxcloud/lowcode-utils';
 import RegistryPlugin from './plugins/registry';
 import InitPlugin from './plugins/init';
 import SetterPlugin from './plugins/setter';
@@ -33,6 +33,8 @@ import './editor.less';
   await plugins.register(CodeEditor);
   await plugins.register(Actions);
 
+  setupHostEnvironment(project);
+
   await init(
     document.getElementById('lce-container')!,
     {
@@ -40,12 +42,11 @@ import './editor.less';
       enableCanvasLock: true,
       supportVariableGlobally: true,
       simulatorUrl: [
-        'https://unpkg.com/vue-router/dist/vue-router.global.prod.js',
         'https://unpkg.com/@knxcloud/lowcode-vue-simulator-renderer/dist/vue-simulator-renderer.js',
         'https://unpkg.com/@knxcloud/lowcode-vue-simulator-renderer/dist/vue-simulator-renderer.css',
         '/js/simulator.js',
       ],
-    } as EngineOptions,
+    },
     preference
   );
 })();

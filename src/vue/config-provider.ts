@@ -6,6 +6,7 @@ import {
   GlobalThemeOverrides,
   ConfigProviderProps,
   NMessageProvider,
+  createDiscreteApi,
 } from 'naive-ui';
 
 const overrides: GlobalThemeOverrides = {
@@ -41,6 +42,10 @@ export const configProviderProps: ConfigProviderProps = {
   dateLocale: dateZhCN,
   themeOverrides: overrides,
 };
+
+export const { message } = createDiscreteApi(['message'], {
+  configProviderProps,
+});
 
 export const ConfigProvider = defineComponent((_, { slots }) => {
   return () => {

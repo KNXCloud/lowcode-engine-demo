@@ -1,12 +1,6 @@
 {
   "packages": [
     {
-      "package": "vue",
-      "version": "3.2.33",
-      "urls": ["https://unpkg.com/vue@3.2.37/dist/vue.runtime.global.js"],
-      "library": "Vue"
-    },
-    {
       "package": "naive-ui",
       "version": "2.30.6",
       "urls": ["https://unpkg.com/naive-ui@2.30.6/dist/index.prod.js"],
