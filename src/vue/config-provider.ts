@@ -47,10 +47,13 @@ export const { message } = createDiscreteApi(['message'], {
   configProviderProps,
 });
 
-export const ConfigProvider = defineComponent((_, { slots }) => {
-  return () => {
-    return h(NConfigProvider, configProviderProps, {
-      default: () => h(NMessageProvider, null, slots),
-    });
-  };
+export const ConfigProvider = defineComponent({
+  inheritAttrs: false,
+  setup: (_, { slots }) => {
+    return () => {
+      return h(NConfigProvider, configProviderProps, {
+        default: () => h(NMessageProvider, null, slots),
+      });
+    };
+  },
 });
