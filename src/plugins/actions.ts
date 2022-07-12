@@ -1,3 +1,4 @@
+import { createElement as h } from 'react';
 import { Button, Message } from '@alifd/next';
 import { saveSchema } from '@/utils/store';
 import { ILowCodePluginContext } from '@alilc/lowcode-engine';
@@ -23,7 +24,7 @@ const savePlugin = (ctx: ILowCodePluginContext) => {
         area: 'topArea',
         type: 'Widget',
         props: { align: 'right' },
-        content: <Button onClick={save}>保存到本地</Button>,
+        content: h(Button, { onClick: save }, '保存到本地'),
       });
 
       skeleton.add({
@@ -31,11 +32,7 @@ const savePlugin = (ctx: ILowCodePluginContext) => {
         area: 'topArea',
         type: 'Widget',
         props: { align: 'right' },
-        content: (
-          <Button type="primary" onClick={preview}>
-            预览
-          </Button>
-        ),
+        content: h(Button, { onClick: preview }, '预览'),
       });
 
       hotkey.bind('command+s', async (e) => {

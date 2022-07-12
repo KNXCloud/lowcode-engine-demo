@@ -1,8 +1,9 @@
 import { injectAssets } from '@alilc/lowcode-plugin-inject';
 import { ILowCodePluginContext } from '@alilc/lowcode-engine';
-import assets from '../assets/assets.json';
-import originSchema from '../assets/schema.json';
+import { setupHostEnvironment } from '@knxcloud/lowcode-utils';
 import { getProjectSchemaToLocalStorage } from '@/utils/store';
+import assets from '@/assets/assets.json';
+import originSchema from '@/assets/schema.json';
 
 const editorInit = (ctx: ILowCodePluginContext) => {
   return {
@@ -14,7 +15,11 @@ const editorInit = (ctx: ILowCodePluginContext) => {
 
       const projectSchema = getProjectSchemaToLocalStorage();
       const schema = projectSchema ? projectSchema['componentsTree'].pop() : originSchema;
-      project.openDocument(schema);
+
+      setupHostEnvironment(project);
+      project.onSimulatorRendererReady(() => {
+        project.openDocument(schema);
+      });
     },
   };
 };
