@@ -33,7 +33,7 @@ import './editor.less';
   await plugins.register(CodeEditor);
   await plugins.register(Actions);
 
-  setupHostEnvironment(project);
+  setupHostEnvironment(project, 'https://unpkg.com/vue/dist/vue.runtime.global.js');
 
   await init(
     document.getElementById('lce-container')!,

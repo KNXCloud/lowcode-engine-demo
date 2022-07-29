@@ -2,8 +2,8 @@
   "packages": [
     {
       "package": "naive-ui",
-      "version": "2.30.6",
-      "urls": ["https://unpkg.com/naive-ui@2.30.6/dist/index.prod.js"],
+      "version": "2.32.0",
+      "urls": ["https://unpkg.com/naive-ui@2.32.0/dist/index.prod.js"],
       "library": "naive"
     }
   ],
