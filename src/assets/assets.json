@@ -600,6 +600,135 @@
       }
     },
     {
+      "title": "栅格",
+      "category": "布局组件",
+      "componentName": "NGrid",
+      "npm": {
+        "package": "naive-ui",
+        "version": "2.30.6",
+        "exportName": "NGrid",
+        "destructuring": true
+      },
+      "configure": {
+        "component": {
+          "isContainer": true
+        },
+        "props": [
+          {
+            "name": "cols",
+            "title": "显示的栅格数量",
+            "setter": {
+              "componentName": "MixedSetter",
+              "props": {
+                "setters": ["NumberSetter", "StringSetter"]
+              }
+            },
+            "defaultValue": 24
+          },
+          {
+            "name": "collapsed",
+            "title": "是否默认折叠",
+            "setter": "BoolSetter",
+            "defaultValue": false
+          },
+          {
+            "name": "collapsed-rows",
+            "title": "默认展示的行数",
+            "setter": "NumberSetter",
+            "defaultValue": 1
+          },
+          {
+            "name": "responsive",
+            "title": "响应式策略",
+            "setter": {
+              "componentName": "RadioGroupSetter",
+              "props": {
+                "options": [
+                  { "label": "自身宽度", "value": "self" },
+                  { "label": "屏幕宽度", "value": "screen" }
+                ]
+              }
+            },
+            "defaultValue": "self"
+          },
+          {
+            "name": "item-responsive",
+            "title": "子元素响应式宽度",
+            "setter": "BoolSetter",
+            "defaultValue": false
+          },
+          {
+            "name": "x-gap",
+            "title": "横向间隔槽",
+            "setter": {
+              "componentName": "MixedSetter",
+              "props": {
+                "setters": ["NumberSetter", "StringSetter"]
+              }
+            },
+            "defaultValue": 0
+          },
+          {
+            "name": "y-gap",
+            "title": "纵向间隔槽",
+            "setter": {
+              "componentName": "MixedSetter",
+              "props": {
+                "setters": ["NumberSetter", "StringSetter"]
+              }
+            },
+            "defaultValue": 0
+          }
+        ]
+      }
+    },
+    {
+      "title": "栅格项",
+      "category": "布局组件",
+      "componentName": "NGridItem",
+      "npm": {
+        "package": "naive-ui",
+        "version": "2.30.6",
+        "exportName": "NGridItem",
+        "destructuring": true
+      },
+      "configure": {
+        "component": {
+          "isContainer": true
+        },
+        "props": [
+          {
+            "name": "offset",
+            "title": "栅格左侧的间隔格数",
+            "setter": {
+              "componentName": "MixedSetter",
+              "props": {
+                "setters": ["NumberSetter", "StringSetter"]
+              }
+            },
+            "defaultValue": 0
+          },
+          {
+            "name": "span",
+            "title": "栅格占据的列数",
+            "setter": {
+              "componentName": "MixedSetter",
+              "props": {
+                "setters": ["NumberSetter", "StringSetter"]
+              }
+            },
+            "defaultValue": 1
+          },
+          {
+            "name": "suffix",
+            "title": "栅格后缀",
+            "setter": "BoolSetter",
+            "defaultValue": false
+          }
+        ]
+      }
+    },
+    {
       "category": "基础组件",
       "componentName": "NButton",
       "npm": {
@@ -1485,6 +1614,36 @@
               "schema": {
                 "componentName": "NSpace",
                 "children": []
+              }
+            }
+          ]
+        },
+        {
+          "componentName": "NGrid",
+          "library": "naive-ui",
+          "snippets": [
+            {
+              "screenshot": "https://alifd.alicdn.com/fusion-cool/icons/icon-antd/1-1.png",
+              "title": "两栏栅格",
+              "schema": {
+                "componentName": "NGrid",
+                "props": {
+                  "cols": 24
+                },
+                "children": [
+                  {
+                    "componentName": "NGridItem",
+                    "props": {
+                      "span": 12
+                    }
+                  },
+                  {
+                    "componentName": "NGridItem",
+                    "props": {
+                      "span": 12
+                    }
+                  }
+                ]
               }
             }
           ]

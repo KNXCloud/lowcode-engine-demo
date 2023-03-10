@@ -1,11 +1,7 @@
 import { Asset } from '@alilc/lowcode-types';
-import { NSpin } from 'naive-ui';
-import { buildComponents, AssetLoader } from '@knxcloud/lowcode-utils';
 import VueRenderer, { config } from '@knxcloud/lowcode-vue-renderer';
-import { defineComponent, onMounted, reactive, h, createApp, toRaw } from 'vue';
-import { ConfigProvider, message } from './config-provider';
-
-config.setConfigProvider(ConfigProvider);
+import { buildComponents, AssetLoader } from '@knxcloud/lowcode-utils';
+import { h, createApp, toRaw } from 'vue';
 
 const init = async () => {
   const packages = JSON.parse(window.localStorage.getItem('packages') || '[]');
@@ -33,19 +29,11 @@ const init = async () => {
   return { schema: componentsTree[0], components };
 };
 
-const Preview = defineComponent(() => {
-  const data = reactive<any>({});
-
-  onMounted(async () => {
-    Object.assign(data, await init());
-  });
-
-  return () => {
-    const { schema, components } = data;
-    if (!schema || !components) {
-      return h(NSpin);
-    }
-
+(async () => {
+  const { schema, components } = await init();
+  const { ConfigProvider, message } = await import('./config-provider');
+  config.setConfigProvider(ConfigProvider);
+  const app = createApp(() => {
     return h('div', { class: 'lowcode-plugin-sample-preview' }, [
       h(VueRenderer, {
         class: 'lowcode-plugin-sample-preview-content',
@@ -53,9 +41,7 @@ const Preview = defineComponent(() => {
         components: toRaw(components),
       }),
     ]);
-  };
-});
-
-const app = createApp(Preview);
-app.config.globalProperties.$message = message;
-app.mount('#lce-container');
+  });
+  app.config.globalProperties.$message = message;
+  app.mount('#lce-container');
+})();

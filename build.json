@@ -17,7 +17,8 @@
     "prop-types": "var window.PropTypes",
     "react": "var window.React",
     "react-dom": "var window.ReactDOM",
-    "vue": "var window.Vue"
+    "vue": "var window.Vue",
+    "naive-ui": "naive"
   },
   "outputDir": "docs",
   "vendor": false,
