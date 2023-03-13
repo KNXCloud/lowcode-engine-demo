@@ -1,5 +1,5 @@
 import { Asset } from '@alilc/lowcode-types';
-import VueRenderer, { config } from '@knxcloud/lowcode-vue-renderer';
+import VueRenderer from '@knxcloud/lowcode-vue-renderer';
 import { buildComponents, AssetLoader } from '@knxcloud/lowcode-utils';
 import { h, createApp, toRaw } from 'vue';
 
@@ -31,8 +31,6 @@ const init = async () => {
 
 (async () => {
   const { schema, components } = await init();
-  const { ConfigProvider, message } = await import('./config-provider');
-  config.setConfigProvider(ConfigProvider);
   const app = createApp(() => {
     return h('div', { class: 'lowcode-plugin-sample-preview' }, [
       h(VueRenderer, {
@@ -42,6 +40,5 @@ const init = async () => {
       }),
     ]);
   });
-  app.config.globalProperties.$message = message;
   app.mount('#lce-container');
 })();

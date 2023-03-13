@@ -3,12 +3,14 @@ import { init, plugins, project } from '@alilc/lowcode-engine';
 import UndoRedoPlugin from '@alilc/lowcode-plugin-undo-redo';
 import SchemaPlugin from '@alilc/lowcode-plugin-schema';
 import DataSource from '@alilc/lowcode-plugin-datasource-pane';
-import CodeEditor from '@alilc/lowcode-plugin-code-editor';
 import { setupHostEnvironment } from '@knxcloud/lowcode-utils';
+import CodeEditor from '@knxcloud/lowcode-plugin-vue-code-editor';
 import RegistryPlugin from './plugins/registry';
 import InitPlugin from './plugins/init';
 import SetterPlugin from './plugins/setter';
 import Actions from './plugins/actions';
+
+import '@knxcloud/lowcode-plugin-vue-code-editor/dist/style.css';
 import './editor.less';
 
 (async () => {
@@ -33,10 +35,7 @@ import './editor.less';
   await plugins.register(CodeEditor);
   await plugins.register(Actions);
 
-  setupHostEnvironment(
-    project,
-    'https://unpkg.com/vue@3.2.47/dist/vue.runtime.global.js'
-  );
+  setupHostEnvironment(project, '/js/vue.runtime.global.js');
 
   await init(
     document.getElementById('lce-container')!,
@@ -44,11 +43,7 @@ import './editor.less';
       enableCondition: true,
       enableCanvasLock: true,
       supportVariableGlobally: true,
-      simulatorUrl: [
-        'https://unpkg.com/@knxcloud/lowcode-vue-simulator-renderer/dist/vue-simulator-renderer.js',
-        'https://unpkg.com/@knxcloud/lowcode-vue-simulator-renderer/dist/vue-simulator-renderer.css',
-        '/js/simulator.js',
-      ],
+      simulatorUrl: ['/js/vue-simulator-renderer.js', '/js/vue-simulator-renderer.css'],
     },
     preference
   );
