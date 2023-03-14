@@ -35,7 +35,7 @@ import './editor.less';
   await plugins.register(CodeEditor);
   await plugins.register(Actions);
 
-  setupHostEnvironment(project, '/js/vue.runtime.global.js');
+  setupHostEnvironment(project, '/lowcode-engine-demo/js/vue.runtime.global.js');
 
   await init(
     document.getElementById('lce-container')!,
