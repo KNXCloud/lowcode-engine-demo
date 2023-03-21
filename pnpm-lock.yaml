@@ -7,14 +7,14 @@ specifiers:
   '@alilc/lowcode-plugin-components-pane': ^1.0.7
   '@alilc/lowcode-plugin-datasource-pane': ^1.0.10
   '@alilc/lowcode-plugin-inject': ^1.2.2
-  '@alilc/lowcode-plugin-schema': ^1.0.4
+  '@alilc/lowcode-plugin-schema': ^1.0.5
   '@alilc/lowcode-plugin-undo-redo': ^1.0.0
   '@alilc/lowcode-types': ^1.1.3
   '@babel/core': ^7.21.0
-  '@knxcloud/lowcode-plugin-vue-code-editor': 0.0.1-beta.3
-  '@knxcloud/lowcode-utils': ^1.6.0-beta.4
-  '@knxcloud/lowcode-vue-renderer': ^1.6.0-beta.5
-  '@knxcloud/lowcode-vue-simulator-renderer': ^1.6.0-beta.5
+  '@knxcloud/lowcode-plugin-vue-code-editor': 0.0.1-beta.6
+  '@knxcloud/lowcode-utils': ^1.6.0-beta.5
+  '@knxcloud/lowcode-vue-renderer': ^1.6.0-beta.7
+  '@knxcloud/lowcode-vue-simulator-renderer': ^1.6.0-beta.7
   '@rushstack/eslint-patch': ^1.2.0
   '@types/node': ^17.0.45
   '@types/prop-types': ^15.7.5
@@ -30,7 +30,6 @@ specifiers:
   eslint-plugin-prettier: ^4.2.1
   eslint-plugin-react: ^7.32.2
   module: ^1.2.5
-  naive-ui: ^2.34.3
   postcss: 8.4.14
   postcss-html: ^1.5.0
   postcss-less: ^6.0.0
@@ -49,13 +48,13 @@ dependencies:
   '@alilc/lowcode-plugin-components-pane': 1.0.7
   '@alilc/lowcode-plugin-datasource-pane': 1.0.10_olhaqsdgjdqysecutor5doous4
   '@alilc/lowcode-plugin-inject': 1.2.2
-  '@alilc/lowcode-plugin-schema': 1.0.4
+  '@alilc/lowcode-plugin-schema': 1.0.5
   '@alilc/lowcode-plugin-undo-redo': 1.0.0
   '@alilc/lowcode-types': 1.1.3
-  '@knxcloud/lowcode-plugin-vue-code-editor': 0.0.1-beta.3_vue@3.2.47
-  '@knxcloud/lowcode-utils': 1.6.0-beta.4_vue@3.2.47
-  '@knxcloud/lowcode-vue-renderer': 1.6.0-beta.5_vue@3.2.47
-  '@knxcloud/lowcode-vue-simulator-renderer': 1.6.0-beta.5_vue@3.2.47
+  '@knxcloud/lowcode-plugin-vue-code-editor': 0.0.1-beta.6_kdffdoyecplkkkzijvqjxp5knq
+  '@knxcloud/lowcode-utils': 1.6.0-beta.5_kdffdoyecplkkkzijvqjxp5knq
+  '@knxcloud/lowcode-vue-renderer': 1.6.0-beta.7_kdffdoyecplkkkzijvqjxp5knq
+  '@knxcloud/lowcode-vue-simulator-renderer': 1.6.0-beta.7_kdffdoyecplkkkzijvqjxp5knq
   module: 1.2.5
 
 devDependencies:
@@ -77,7 +76,6 @@ devDependencies:
   eslint-config-prettier: 8.6.0_eslint@8.34.0
   eslint-plugin-prettier: 4.2.1_u5wnrdwibbfomslmnramz52buy
   eslint-plugin-react: 7.32.2_eslint@8.34.0
-  naive-ui: 2.34.3_vue@3.2.47
   postcss: 8.4.14
   postcss-html: 1.5.0
   postcss-less: 6.0.0_postcss@8.4.14
@@ -467,8 +465,8 @@ packages:
       - react-native
       - supports-color
 
-  /@alilc/lowcode-plugin-schema/1.0.4:
-    resolution: {integrity: sha512-60GZ+y18CU6bI6RfqbZLSylNuk04gR5nWfFaPJQ7SOl7xsv+cGc+bKv7MhEv3TGtCrEoXeNVmXfqWL4im0ecDg==}
+  /@alilc/lowcode-plugin-schema/1.0.5:
+    resolution: {integrity: sha512-gocgTFZhKLFGhhI86bKG06dczq6JHA7+4flA5g6oGzxSCtbg931NDTVfKOC8/6p57awGEE9v+WctahDRMlhe3w==}
     dependencies:
       '@alifd/next': 1.26.12_wcqkhtmu7mswc6yz4uyexck3ty
       '@alilc/lowcode-plugin-base-monaco-editor': 1.1.1
@@ -2230,22 +2228,6 @@ packages:
       minimist: 1.2.8
     dev: true
 
-  /@css-render/plugin-bem/0.15.12_css-render@0.15.12:
-    resolution: {integrity: sha512-Lq2jSOZn+wYQtsyaFj6QRz2EzAnd3iW5fZeHO1WSXQdVYwvwGX0ZiH3X2JQgtgYLT1yeGtrwrqJdNdMEUD2xTw==}
-    peerDependencies:
-      css-render: ~0.15.12
-    dependencies:
-      css-render: 0.15.12
-    dev: true
-
-  /@css-render/vue3-ssr/0.15.12_vue@3.2.47:
-    resolution: {integrity: sha512-AQLGhhaE0F+rwybRCkKUdzBdTEM/5PZBYy+fSYe1T9z9+yxMuV/k7ZRqa4M69X+EI1W8pa4kc9Iq2VjQkZx4rg==}
-    peerDependencies:
-      vue: ^3.0.11
-    dependencies:
-      vue: 3.2.47
-    dev: true
-
   /@csstools/convert-colors/1.4.0:
     resolution: {integrity: sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==}
     engines: {node: '>=4.0.0'}
@@ -2260,10 +2242,6 @@ packages:
     dependencies:
       postcss: 8.4.21
       postcss-selector-parser: 6.0.11
-    dev: true
-
-  /@emotion/hash/0.8.0:
-    resolution: {integrity: sha512-kBJtf7PH6aWwZ6fka3zQ0p6SBYzx4fl1LoZXE2RrnYST9Xljm7WfKJrU4g/Xr3Beg72MLrp1AWNUmuYJTL7Cow==}
     dev: true
 
   /@esbuild/android-arm/0.16.17:
@@ -3064,30 +3042,35 @@ packages:
 
   /@juggle/resize-observer/3.4.0:
     resolution: {integrity: sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==}
-
-  /@knxcloud/lowcode-hooks/1.6.0-beta.3_vue@3.2.47:
-    resolution: {integrity: sha512-doh7dd0NnsxqRjEpEjK50j0KFFh41AtsITeJrObrwRacx7a/1RFuk9ZguVpwoDm1c6JEczJdfogQdxlbTdMnjg==}
-    peerDependencies:
-      vue: ^3.2.0
-    dependencies:
-      '@alilc/lowcode-designer': 1.1.3
-      '@alilc/lowcode-types': 1.1.3
-      vue: 3.2.47
-    transitivePeerDependencies:
-      - '@alifd/meet-react'
-      - moment
-      - react-native
-      - supports-color
     dev: false
 
-  /@knxcloud/lowcode-plugin-vue-code-editor/0.0.1-beta.3_vue@3.2.47:
-    resolution: {integrity: sha512-SWp1a5RvkEjQuJl2yCiu0N5Nvg+xjXgOOuT/nVvbcN7jkJAjYMJwOqOWGXWB1v84ETtuFl/Cz0/PJNqk4bgKMA==}
+  /@knxcloud/lowcode-hooks/1.6.0-beta.4_kdffdoyecplkkkzijvqjxp5knq:
+    resolution: {integrity: sha512-Av85kRLoXBUE4gKbrCmr2Fp8IpvtmkudLtWouDkub76ISnMzMakvLGha1/CUkAQp67BvP+hNgWSYkkU+8igd6w==}
+    peerDependencies:
+      '@alilc/lowcode-designer': '>= 1.1.x < 2'
+      '@alilc/lowcode-types': '>= 1.1.x < 2'
+      vue: '>= 3.x < 4'
+      vue-router: '*'
+    peerDependenciesMeta:
+      '@alilc/lowcode-designer':
+        optional: true
+      '@alilc/lowcode-types':
+        optional: true
+      vue-router:
+        optional: true
+    dependencies:
+      '@alilc/lowcode-types': 1.1.3
+      vue: 3.2.47
+    dev: false
+
+  /@knxcloud/lowcode-plugin-vue-code-editor/0.0.1-beta.6_kdffdoyecplkkkzijvqjxp5knq:
+    resolution: {integrity: sha512-iFAfBrRKOfb2KaKBkMztfQR+ZiwguOhJh/LtNR8XyAVUBblH9A9ufKPhnv04c9iMp1Ln0nIRmfleC9/CO/p17w==}
     peerDependencies:
       '@alifd/next': '*'
       react: '>=16'
     dependencies:
       '@alilc/lowcode-plugin-base-monaco-editor': 1.1.1_monaco-editor@0.36.1
-      '@knxcloud/lowcode-utils': 1.6.0-beta.4_vue@3.2.47
+      '@knxcloud/lowcode-utils': 1.6.0-beta.5_kdffdoyecplkkkzijvqjxp5knq
       '@monaco-editor/loader': 1.3.2_monaco-editor@0.36.1
       '@vue/compiler-core': 3.2.47
       acorn: 8.8.2
@@ -3095,64 +3078,69 @@ packages:
       monaco-editor: 0.36.1
       short-uuid: 4.2.2
     transitivePeerDependencies:
-      - '@alifd/meet-react'
-      - moment
-      - react-native
-      - supports-color
+      - '@alilc/lowcode-designer'
+      - '@alilc/lowcode-types'
       - vue
     dev: false
 
-  /@knxcloud/lowcode-utils/1.6.0-beta.4_vue@3.2.47:
-    resolution: {integrity: sha512-e3E04a8y6ToJC9oW5KNlULAZ0rfwA+H0AxRcsGPb9/1H30wNlEQtVtDiD9HYZCXAb/JSntAIaBKGDdM/uw7bKw==}
+  /@knxcloud/lowcode-utils/1.6.0-beta.5_kdffdoyecplkkkzijvqjxp5knq:
+    resolution: {integrity: sha512-Zi3B1DtWgOTMcphDuuMsbItFC/ZMyJTB3DwpVedpdvIfkXkcLQ486qQHbUQNf3sI2PUg3O62tGaGBfn9dBq8nw==}
     peerDependencies:
+      '@alilc/lowcode-designer': '>= 1.1.x < 2'
+      '@alilc/lowcode-types': '>= 1.1.x < 2'
       vue: '>=3.2'
     peerDependenciesMeta:
+      '@alilc/lowcode-designer':
+        optional: true
+      '@alilc/lowcode-types':
+        optional: true
       vue:
         optional: true
     dependencies:
-      '@alilc/lowcode-designer': 1.1.3
       '@alilc/lowcode-types': 1.1.3
       vue: 3.2.47
-    transitivePeerDependencies:
-      - '@alifd/meet-react'
-      - moment
-      - react-native
-      - supports-color
     dev: false
 
-  /@knxcloud/lowcode-vue-renderer/1.6.0-beta.5_vue@3.2.47:
-    resolution: {integrity: sha512-JSzTW6Y1AI/HysklYVsAKXEimrpfVIA9Bo439dT73jiKPRBFZ08KTJ7vsOShmjHuAEVdDO6kfRl5TvlkymkrBw==}
+  /@knxcloud/lowcode-vue-renderer/1.6.0-beta.7_kdffdoyecplkkkzijvqjxp5knq:
+    resolution: {integrity: sha512-EJCzxm1uDzUb1KrghnJtzjbP0/7b2t/Qy1NkHTzASHBX9kr2ULOTAMvXN7zthAkGqUp2fNbfcMDQaLq4IW1d9w==}
     peerDependencies:
-      vue: ^3.2.0
+      '@alilc/lowcode-designer': '>= 1.1.x < 2'
+      '@alilc/lowcode-types': '>= 1.1.x < 2'
+      vue: '>= 3.x < 4'
+      vue-router: '>= 4.x < 5'
+    peerDependenciesMeta:
+      '@alilc/lowcode-designer':
+        optional: true
+      '@alilc/lowcode-types':
+        optional: true
+      vue-router:
+        optional: true
     dependencies:
       '@alilc/lowcode-types': 1.1.3
-      '@knxcloud/lowcode-hooks': 1.6.0-beta.3_vue@3.2.47
-      '@knxcloud/lowcode-utils': 1.6.0-beta.4_vue@3.2.47
+      '@knxcloud/lowcode-hooks': 1.6.0-beta.4_kdffdoyecplkkkzijvqjxp5knq
+      '@knxcloud/lowcode-utils': 1.6.0-beta.5_kdffdoyecplkkkzijvqjxp5knq
       intl-messageformat: 10.3.1
       vue: 3.2.47
-    transitivePeerDependencies:
-      - '@alifd/meet-react'
-      - moment
-      - react-native
-      - supports-color
     dev: false
 
-  /@knxcloud/lowcode-vue-simulator-renderer/1.6.0-beta.5_vue@3.2.47:
-    resolution: {integrity: sha512-+8f8iH+ypLu+M+/0H5wVI7H+SSp/CpM4U99heq69bOMfm0JRc7m3dhSs3CUe536MkZGSH8iwD3/qLud6Dx6zSQ==}
+  /@knxcloud/lowcode-vue-simulator-renderer/1.6.0-beta.7_kdffdoyecplkkkzijvqjxp5knq:
+    resolution: {integrity: sha512-/WOBvH2XvYcu+jBTLG3hjc26yLbhC1vuwKprwPPHDaZqbcF56JFHgiaeXxIazC1QouFKLvutWMLED2PdSJRC2A==}
     peerDependencies:
-      vue: ^3.2.0
+      '@alilc/lowcode-designer': '>= 1.1.x < 2'
+      '@alilc/lowcode-types': '>= 1.1.x < 2'
+      vue: '>= 3.x < 4'
+      vue-router: '>= 4.x < 5'
+    peerDependenciesMeta:
+      '@alilc/lowcode-designer':
+        optional: true
+      '@alilc/lowcode-types':
+        optional: true
     dependencies:
-      '@alilc/lowcode-designer': 1.1.3
       '@alilc/lowcode-types': 1.1.3
-      '@knxcloud/lowcode-utils': 1.6.0-beta.4_vue@3.2.47
-      '@knxcloud/lowcode-vue-renderer': 1.6.0-beta.5_vue@3.2.47
+      '@knxcloud/lowcode-hooks': 1.6.0-beta.4_kdffdoyecplkkkzijvqjxp5knq
+      '@knxcloud/lowcode-utils': 1.6.0-beta.5_kdffdoyecplkkkzijvqjxp5knq
+      '@knxcloud/lowcode-vue-renderer': 1.6.0-beta.7_kdffdoyecplkkkzijvqjxp5knq
       vue: 3.2.47
-      vue-router: 4.1.6_vue@3.2.47
-    transitivePeerDependencies:
-      - '@alifd/meet-react'
-      - moment
-      - react-native
-      - supports-color
     dev: false
 
   /@monaco-editor/loader/1.3.0:
@@ -3373,18 +3361,9 @@ packages:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
     dev: true
 
-  /@types/katex/0.14.0:
-    resolution: {integrity: sha512-+2FW2CcT0K3P+JMR8YG846bmDwplKUTsWgT2ENwdQ1UdVfRk3GQrh6Mi4sTopy30gI8Uau5CEqHTDZ6YvWIUPA==}
-    dev: true
-
-  /@types/lodash-es/4.17.6:
-    resolution: {integrity: sha512-R+zTeVUKDdfoRxpAryaQNRKk3105Rrgx2CFRClIgRGaqDTdjsm8h6IYA8ir584W3ePzkZfst5xIgDwYrlh9HLg==}
-    dependencies:
-      '@types/lodash': 4.14.191
-    dev: true
-
   /@types/lodash/4.14.191:
     resolution: {integrity: sha512-BdZ5BCCvho3EIXw6wUCXHe7rS53AIDPLE+JzwgT+OsJk53oBfbSmZZ7CX4VaRoN78N+TJpFi9QPlfIVNmJYWxQ==}
+    dev: false
 
   /@types/mdast/3.0.10:
     resolution: {integrity: sha512-W864tg/Osz1+9f4lrGTZpCSO5/z4608eUp19tbozkq2HJK6i3z1kT0H9tlADXuYIb1YYOBByU4Jsqkk75q48qA==}
@@ -3692,10 +3671,6 @@ packages:
     dependencies:
       '@vue/compiler-dom': 3.2.47
       '@vue/shared': 3.2.47
-
-  /@vue/devtools-api/6.5.0:
-    resolution: {integrity: sha512-o9KfBeaBmCKl10usN4crU53fYtC1r7jJwdGKjPT24t348rHxgfpZ0xL3Xm/gLUYnc0oTp8LAmrxOeLyu6tbk2Q==}
-    dev: false
 
   /@vue/reactivity-transform/3.2.47:
     resolution: {integrity: sha512-m8lGXw8rdnPVVIdIFhf0LeQ/ixyHkH5plYuS83yop5n7ggVJU+z5v0zecwEnX7fa7HNLBhh2qngJJkxpwEEmYA==}
@@ -4392,10 +4367,6 @@ packages:
 
   /async-limiter/1.0.1:
     resolution: {integrity: sha512-csOlWGAcRFJaI6m+F2WKdnMKr4HhdhFVBk0H/QbJFMCr+uO2kwohwXQPxw/9OCxp05r5ghVBFSyioixx3gfkNQ==}
-    dev: true
-
-  /async-validator/4.2.5:
-    resolution: {integrity: sha512-7HhHjtERjqlNbZtqNqy2rckN/SpOOlmDliet+lP7k+eKZEjPk3DgyeU9lIXLdeLz0uBbbVp+9Qdow9wJWgwwfg==}
     dev: true
 
   /async/2.6.4:
@@ -6379,13 +6350,6 @@ packages:
       postcss: 7.0.39
     dev: true
 
-  /css-render/0.15.12:
-    resolution: {integrity: sha512-eWzS66patiGkTTik+ipO9qNGZ+uNuGyTmnz6/+EJIiFg8+3yZRpnMwgFo8YdXhQRsiePzehnusrxVvugNjXzbw==}
-    dependencies:
-      '@emotion/hash': 0.8.0
-      csstype: 3.0.11
-    dev: true
-
   /css-select-base-adapter/0.1.1:
     resolution: {integrity: sha512-jQVeeRG70QI08vSTwf1jHxp74JoZsr2XSgETae8/xC8ovSnL2WF87GTLO86Sbwdt2lK4Umg4HnnwMO4YF3Ce7w==}
     dev: true
@@ -6582,10 +6546,6 @@ packages:
   /csstype/2.6.21:
     resolution: {integrity: sha512-Z1PhmomIfypOpoMjRQB70jfvy/wxT50qW08YXO5lMIJkrdq4yOTR+AW7FqutScmB9NkLwxo+jU+kZLbofZZq/w==}
 
-  /csstype/3.0.11:
-    resolution: {integrity: sha512-sa6P2wJ+CAbgyy4KFssIb/JNMLxFvKF1pCYCSXS8ZMuqZnMsrxqI2E5sPyoTpxoPU/gVZMzr2zjOfg8GIZOMsw==}
-    dev: true
-
   /csstype/3.1.1:
     resolution: {integrity: sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==}
 
@@ -6607,19 +6567,6 @@ packages:
       abab: 2.0.6
       whatwg-mimetype: 2.3.0
       whatwg-url: 8.7.0
-    dev: true
-
-  /date-fns-tz/1.3.8_date-fns@2.29.3:
-    resolution: {integrity: sha512-qwNXUFtMHTTU6CFSFjoJ80W8Fzzp24LntbjFFBgL/faqds4e5mo9mftoRLgr3Vi1trISsg4awSpYVsOQCRnapQ==}
-    peerDependencies:
-      date-fns: '>=2.0.0'
-    dependencies:
-      date-fns: 2.29.3
-    dev: true
-
-  /date-fns/2.29.3:
-    resolution: {integrity: sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA==}
-    engines: {node: '>=0.11'}
     dev: true
 
   /dayjs/1.11.7:
@@ -7952,10 +7899,6 @@ packages:
     dependencies:
       md5.js: 1.3.5
       safe-buffer: 5.2.1
-    dev: true
-
-  /evtd/0.2.4:
-    resolution: {integrity: sha512-qaeGN5bx63s/AXgQo8gj6fBkxge+OoLddLniox5qtLAEY5HSnuSlISXVPxnSae1dWblvTh4/HoMIB+mbMsvZzw==}
     dev: true
 
   /exec-sh/0.3.6:
@@ -9324,11 +9267,6 @@ packages:
 
   /hex-color-regex/1.1.0:
     resolution: {integrity: sha512-l9sfDFsuqtOqKDsQdqrMRk0U85RZc0RtOR9yPI7mRVOa4FsR/BVnZ0shmQRM96Ji99kYZP/7hn1cedc1+ApsTQ==}
-    dev: true
-
-  /highlight.js/11.7.0:
-    resolution: {integrity: sha512-1rRqesRFhMO/PRF+G86evnyJkCgaZFOI+Z6kdj15TA18funfoqJXvgPCLSf0SWq3SRfg1j3HlDs8o4s3EGq1oQ==}
-    engines: {node: '>=12.0.0'}
     dev: true
 
   /history/4.10.1:
@@ -12544,32 +12482,6 @@ packages:
 
   /mute-stream/0.0.8:
     resolution: {integrity: sha512-nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==}
-    dev: true
-
-  /naive-ui/2.34.3_vue@3.2.47:
-    resolution: {integrity: sha512-fUMr0dzb/iGsOTWgoblPVobY5X5dihQ1eam5dA+H74oyLYAvgX4pL96xQFPBLIYqvyRFBAsN85kHN5pLqdtpxA==}
-    peerDependencies:
-      vue: ^3.0.0
-    dependencies:
-      '@css-render/plugin-bem': 0.15.12_css-render@0.15.12
-      '@css-render/vue3-ssr': 0.15.12_vue@3.2.47
-      '@types/katex': 0.14.0
-      '@types/lodash': 4.14.191
-      '@types/lodash-es': 4.17.6
-      async-validator: 4.2.5
-      css-render: 0.15.12
-      date-fns: 2.29.3
-      date-fns-tz: 1.3.8_date-fns@2.29.3
-      evtd: 0.2.4
-      highlight.js: 11.7.0
-      lodash: 4.17.21
-      lodash-es: 4.17.21
-      seemly: 0.3.6
-      treemate: 0.3.11
-      vdirs: 0.1.8_vue@3.2.47
-      vooks: 0.2.12_vue@3.2.47
-      vue: 3.2.47
-      vueuc: 0.4.51_vue@3.2.47
     dev: true
 
   /nan/2.17.0:
@@ -15938,10 +15850,6 @@ packages:
       ajv-keywords: 3.5.2_ajv@6.12.6
     dev: true
 
-  /seemly/0.3.6:
-    resolution: {integrity: sha512-lEV5VB8BUKTo/AfktXJcy+JeXns26ylbMkIUco8CYREsQijuz4mrXres2Q+vMLdwkuLxJdIPQ8IlCIxLYm71Yw==}
-    dev: true
-
   /select-hose/2.0.0:
     resolution: {integrity: sha512-mEugaLK+YfkijB4fx0e6kImuJdCIt2LxCRcbEYPqRGCs4F2ogyfZU5IAZRdjCP8JPq2AtdNoC/Dux63d9Kiryg==}
     dev: true
@@ -17453,10 +17361,6 @@ packages:
     resolution: {integrity: sha512-/y956gpUo9ZNCb99YjxG7OaslxZWHfCHAUUfshwqOXmxUIvqLjVO581BT+gM59+QV9tFe6/CGG53tsA1Y7RSdg==}
     dev: false
 
-  /treemate/0.3.11:
-    resolution: {integrity: sha512-M8RGFoKtZ8dF+iwJfAJTOH/SM4KluKOKRJpjCMhI8bG3qB74zrFoArKZ62ll0Fr3mqkMJiQOmWYkdYgDeITYQg==}
-    dev: true
-
   /trim-newlines/2.0.0:
     resolution: {integrity: sha512-MTBWv3jhVjTU7XR3IQHllbiJs8sc75a80OEhB6or/q7pLTWgQ0bMGQXXYQSrSuXe6WiKWDZ5txXY5P59a/coVA==}
     engines: {node: '>=4'}
@@ -18109,15 +18013,6 @@ packages:
     engines: {node: '>= 0.8'}
     dev: true
 
-  /vdirs/0.1.8_vue@3.2.47:
-    resolution: {integrity: sha512-H9V1zGRLQZg9b+GdMk8MXDN2Lva0zx72MPahDKc30v+DtwKjfyOSXWRIX4t2mhDubM1H09gPhWeth/BJWPHGUw==}
-    peerDependencies:
-      vue: ^3.0.11
-    dependencies:
-      evtd: 0.2.4
-      vue: 3.2.47
-    dev: true
-
   /vendors/1.0.4:
     resolution: {integrity: sha512-/juG65kTL4Cy2su4P8HjtkTxk6VmJDiOPBufWniqQ6wknac6jNiXS9vU+hO3wgusiyqWlzTbVHi0dyJqRONg3w==}
     dev: true
@@ -18195,24 +18090,6 @@ packages:
     resolution: {integrity: sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==}
     dev: true
 
-  /vooks/0.2.12_vue@3.2.47:
-    resolution: {integrity: sha512-iox0I3RZzxtKlcgYaStQYKEzWWGAduMmq+jS7OrNdQo1FgGfPMubGL3uGHOU9n97NIvfFDBGnpSvkWyb/NSn/Q==}
-    peerDependencies:
-      vue: ^3.0.0
-    dependencies:
-      evtd: 0.2.4
-      vue: 3.2.47
-    dev: true
-
-  /vue-router/4.1.6_vue@3.2.47:
-    resolution: {integrity: sha512-DYWYwsG6xNPmLq/FmZn8Ip+qrhFEzA14EI12MsMgVxvHFDYvlr4NXpVF5hrRH1wVcDP8fGi5F4rxuJSl8/r+EQ==}
-    peerDependencies:
-      vue: ^3.2.0
-    dependencies:
-      '@vue/devtools-api': 6.5.0
-      vue: 3.2.47
-    dev: false
-
   /vue/3.2.47:
     resolution: {integrity: sha512-60188y/9Dc9WVrAZeUVSDxRQOZ+z+y5nO2ts9jWXSTkMvayiWxCWOWtBQoYjLeccfXkiiPZWAHcV+WTPhkqJHQ==}
     dependencies:
@@ -18221,21 +18098,6 @@ packages:
       '@vue/runtime-dom': 3.2.47
       '@vue/server-renderer': 3.2.47_vue@3.2.47
       '@vue/shared': 3.2.47
-
-  /vueuc/0.4.51_vue@3.2.47:
-    resolution: {integrity: sha512-pLiMChM4f+W8czlIClGvGBYo656lc2Y0/mXFSCydcSmnCR1izlKPGMgiYBGjbY9FDkFG8a2HEVz7t0DNzBWbDw==}
-    peerDependencies:
-      vue: ^3.0.11
-    dependencies:
-      '@css-render/vue3-ssr': 0.15.12_vue@3.2.47
-      '@juggle/resize-observer': 3.4.0
-      css-render: 0.15.12
-      evtd: 0.2.4
-      seemly: 0.3.6
-      vdirs: 0.1.8_vue@3.2.47
-      vooks: 0.2.12_vue@3.2.47
-      vue: 3.2.47
-    dev: true
 
   /w3c-hr-time/1.0.2:
     resolution: {integrity: sha512-z8P5DvDNjKDoFIHK7q8r8lackT6l+jo/Ye3HOle7l9nICP9lf1Ci25fy9vHd0JOWewkIFzXIEig3TdKT7JQ5fQ==}
