@@ -1,6 +1,6 @@
 import { material, project } from '@alilc/lowcode-engine';
 import { filterPackages } from '@alilc/lowcode-plugin-inject';
-import { TransformStage } from '@alilc/lowcode-types';
+import { IPublicEnumTransformStage } from '@alilc/lowcode-types';
 
 export const setPackgesToLocalStorage = async () => {
   const packages = await filterPackages(material.getAssets().packages);
@@ -10,7 +10,7 @@ export const setPackgesToLocalStorage = async () => {
 export const setProjectSchemaToLocalStorage = () => {
   window.localStorage.setItem(
     'projectSchema',
-    JSON.stringify(project.exportSchema(TransformStage.Save))
+    JSON.stringify(project.exportSchema(IPublicEnumTransformStage.Save))
   );
 };
 

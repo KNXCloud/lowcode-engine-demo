@@ -1,7 +1,7 @@
 import { createElement as h } from 'react';
 import { Button, Message } from '@alifd/next';
 import { saveSchema } from '@/utils/store';
-import { ILowCodePluginContext } from '@alilc/lowcode-engine';
+import { IPublicModelPluginContext } from '@alilc/lowcode-types';
 
 const save = async () => {
   await saveSchema();
@@ -13,7 +13,7 @@ const preview = async () => {
   window.open('preview.html');
 };
 
-const savePlugin = (ctx: ILowCodePluginContext) => {
+const savePlugin = (ctx: IPublicModelPluginContext) => {
   return {
     name: 'saveSample',
     async init() {
