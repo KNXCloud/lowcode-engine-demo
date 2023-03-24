@@ -64,35 +64,19 @@
   },
   "css": "body {\n  font-size: 12px;\n}\n\n.button {\n  width: 100px;\n  color: #ff00ff\n}",
   "lifeCycles": {
-    "componentDidMount": {
+    "mounted": {
       "type": "JSFunction",
-      "value": "function componentDidMount() {\n  console.log('did mount');\n}"
+      "value": "function mounted() {\n  console.log('did mount');\n}"
     },
-    "componentWillUnmount": {
+    "beforeMount": {
       "type": "JSFunction",
-      "value": "function componentWillUnmount() {\n  console.log('will unmount');\n}"
+      "value": "function beforeMount() {\n  console.log('will unmount');\n}"
     }
   },
   "methods": {
     "testFunc": {
       "type": "JSFunction",
       "value": "function testFunc() {\n  console.log('test func');\n}"
-    },
-    "onClick": {
-      "type": "JSFunction",
-      "value": "function onClick() {\n  this.setState({\n    isShowDialog: true\n  });\n}"
-    },
-    "closeDialog": {
-      "type": "JSFunction",
-      "value": "function closeDialog() {\n  this.setState({\n    isShowDialog: false\n  });\n}"
-    },
-    "onClick_new": {
-      "type": "JSFunction",
-      "value": "function onClick_new() {\n  this.$message.success('hhhhhh');\n}"
-    },
-    "onSubmit": {
-      "type": "JSFunction",
-      "value": "function onSubmit(ev) {\n  ev.preventDefault();\n  this.dataSourceMap.submit.load();\n}"
     }
   },
   "originCode": "class LowcodeComponent extends Component {\n  state = {\n    \"text\": \"outer\",\n    \"isShowDialog\": false,\n    \"info\": {\n      \"info\": \"\",\n      \"user\": {\n        \"username\": \"\",\n        \"password\": \"\"\n      }\n    }\n  }\n  componentDidMount() {\n    console.log('did mount');\n  }\n  componentWillUnmount() {\n    console.log('will unmount');\n  }\n  testFunc() {\n    console.log('test func');\n  }\n  onClick() {\n    this.setState({\n      isShowDialog: true\n    })\n  }\n  closeDialog() {\n    this.setState({\n      isShowDialog: false\n    })\n  }\n\n\tonClick_new(){\n    this.$message.success('hhhhhh')\n\t}\n\n\tonSubmit(ev){\n    ev.preventDefault();\n    this.dataSourceMap.submit.load()\n\t}\n}",

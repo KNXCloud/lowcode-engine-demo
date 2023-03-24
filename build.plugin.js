@@ -19,7 +19,6 @@ module.exports = ({ onGetWebpackConfig }) => {
     config.merge({
       entry: {
         editor: require.resolve('./src/editor.ts'),
-        simulator: require.resolve('./src/vue/simulator.ts'),
       },
     });
 

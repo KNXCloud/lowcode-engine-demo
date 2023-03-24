@@ -1,8 +1,9 @@
-import { isJSExpression } from '@alilc/lowcode-types';
+import { isJSExpression } from '@knxcloud/lowcode-utils';
 import AliLowCodeEngineExt from '@alilc/lowcode-engine-ext';
-import { ILowCodePluginContext, project } from '@alilc/lowcode-engine';
+import { IPublicModelPluginContext } from '@alilc/lowcode-types';
+import { project } from '@alilc/lowcode-engine';
 
-const setterRegistry = (ctx: ILowCodePluginContext) => {
+const setterRegistry = (ctx: IPublicModelPluginContext) => {
   const { setterMap, pluginMap } = AliLowCodeEngineExt;
   return {
     name: 'ext-setters-registry',

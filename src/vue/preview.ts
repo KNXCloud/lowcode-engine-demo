@@ -1,7 +1,7 @@
 import { Asset } from '@alilc/lowcode-types';
 import VueRenderer from '@knxcloud/lowcode-vue-renderer';
 import { buildComponents, AssetLoader } from '@knxcloud/lowcode-utils';
-import { h, createApp, toRaw } from 'vue';
+import { h, createApp, toRaw, Suspense } from 'vue';
 
 const init = async () => {
   const packages = JSON.parse(window.localStorage.getItem('packages') || '[]');
@@ -33,10 +33,15 @@ const init = async () => {
   const { schema, components } = await init();
   const app = createApp(() => {
     return h('div', { class: 'lowcode-plugin-sample-preview' }, [
-      h(VueRenderer, {
-        class: 'lowcode-plugin-sample-preview-content',
-        schema: toRaw(schema),
-        components: toRaw(components),
+      h(Suspense, null, {
+        default: () =>
+          h(VueRenderer, {
+            class: 'lowcode-plugin-sample-preview-content',
+            schema: toRaw(schema),
+            components: toRaw(components),
+          }),
+        fallback: () =>
+          h('div', { class: 'lowcode-plugin-sample-preview-loading' }, 'loading...'),
       }),
     ]);
   });
