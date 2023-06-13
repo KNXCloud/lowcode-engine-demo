@@ -2,19 +2,19 @@ lockfileVersion: 5.4
 
 specifiers:
   '@alib/build-scripts': ^0.1.32
-  '@alilc/lowcode-engine': ^1.1.3
+  '@alilc/lowcode-engine': ^1.1.7
   '@alilc/lowcode-engine-ext': ^1.0.5
   '@alilc/lowcode-plugin-components-pane': ^1.0.7
   '@alilc/lowcode-plugin-datasource-pane': ^1.0.10
   '@alilc/lowcode-plugin-inject': ^1.2.2
   '@alilc/lowcode-plugin-schema': ^1.0.5
   '@alilc/lowcode-plugin-undo-redo': ^1.0.0
-  '@alilc/lowcode-types': ^1.1.3
+  '@alilc/lowcode-types': ^1.1.7
   '@babel/core': ^7.21.0
-  '@knxcloud/lowcode-plugin-vue-code-editor': 0.0.1-beta.6
-  '@knxcloud/lowcode-utils': ^1.6.0-beta.5
-  '@knxcloud/lowcode-vue-renderer': ^1.6.0-beta.7
-  '@knxcloud/lowcode-vue-simulator-renderer': ^1.6.0-beta.7
+  '@knxcloud/lowcode-plugin-vue-code-editor': 0.0.1
+  '@knxcloud/lowcode-utils': ^1.6.0-beta.6
+  '@knxcloud/lowcode-vue-renderer': ^1.6.0-beta.9
+  '@knxcloud/lowcode-vue-simulator-renderer': ^1.6.0-beta.9
   '@rushstack/eslint-patch': ^1.2.0
   '@types/node': ^17.0.45
   '@types/prop-types': ^15.7.5
@@ -50,16 +50,16 @@ dependencies:
   '@alilc/lowcode-plugin-inject': 1.2.2
   '@alilc/lowcode-plugin-schema': 1.0.5
   '@alilc/lowcode-plugin-undo-redo': 1.0.0
-  '@alilc/lowcode-types': 1.1.3
-  '@knxcloud/lowcode-plugin-vue-code-editor': 0.0.1-beta.6_kdffdoyecplkkkzijvqjxp5knq
-  '@knxcloud/lowcode-utils': 1.6.0-beta.5_kdffdoyecplkkkzijvqjxp5knq
-  '@knxcloud/lowcode-vue-renderer': 1.6.0-beta.7_kdffdoyecplkkkzijvqjxp5knq
-  '@knxcloud/lowcode-vue-simulator-renderer': 1.6.0-beta.7_kdffdoyecplkkkzijvqjxp5knq
+  '@alilc/lowcode-types': 1.1.7
+  '@knxcloud/lowcode-plugin-vue-code-editor': 0.0.1_efx5gj36jllg4wcfltedxkwuny
+  '@knxcloud/lowcode-utils': 1.6.0-beta.6_efx5gj36jllg4wcfltedxkwuny
+  '@knxcloud/lowcode-vue-renderer': 1.6.0-beta.9_efx5gj36jllg4wcfltedxkwuny
+  '@knxcloud/lowcode-vue-simulator-renderer': 1.6.0-beta.9_efx5gj36jllg4wcfltedxkwuny
   module: 1.2.5
 
 devDependencies:
   '@alib/build-scripts': 0.1.32_7kw3g6rralp5ps6mg3uyzz6azm
-  '@alilc/lowcode-engine': 1.1.3
+  '@alilc/lowcode-engine': 1.1.7
   '@alilc/lowcode-engine-ext': 1.0.5
   '@babel/core': 7.21.0
   '@rushstack/eslint-patch': 1.2.0
@@ -219,12 +219,12 @@ packages:
     dependencies:
       tslib: 2.5.0
 
-  /@alilc/lowcode-designer/1.1.3:
-    resolution: {integrity: sha512-iC3XZtZXHnqGx3dXPZWKoI73VTsSbTeTCoG1LycNrCBELSxfynqdAiKE6zy2jbVOtjgDZHOiTAz4T6tNxllGUQ==}
+  /@alilc/lowcode-designer/1.1.7:
+    resolution: {integrity: sha512-DcjPagq5k5Hf99HzB4E+zI2lXvTJB4JlUTgffEQlh1Ispl9+JDf5OpcI2mrHjfWAJvzyRc2kUXmaxpaVauqf0Q==}
     dependencies:
-      '@alilc/lowcode-editor-core': 1.1.3
-      '@alilc/lowcode-types': 1.1.3
-      '@alilc/lowcode-utils': 1.1.3_react-dom@16.14.0
+      '@alilc/lowcode-editor-core': 1.1.7
+      '@alilc/lowcode-types': 1.1.7
+      '@alilc/lowcode-utils': 1.1.7_react-dom@16.14.0
       classnames: 2.3.2
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
@@ -236,12 +236,12 @@ packages:
       - react-native
       - supports-color
 
-  /@alilc/lowcode-editor-core/1.1.3:
-    resolution: {integrity: sha512-U4lJEqBgl67torcJcHppn3NPEXfJPfY4Dgzk/9wlyO3NSpW/u4/VD4hWXdC6zSOEJtDwfR+9mPQoxripA68d6Q==}
+  /@alilc/lowcode-editor-core/1.1.7:
+    resolution: {integrity: sha512-+PyIvpi8ZDK7Op9HBTlCuiCXDhRq0kYXAUy+mp0S953qhch9VVCBEhQJdCxdkViM+Z5LoZtvlDEGTaTa7NvAbQ==}
     dependencies:
       '@alifd/next': 1.26.12_wcqkhtmu7mswc6yz4uyexck3ty
-      '@alilc/lowcode-types': 1.1.3
-      '@alilc/lowcode-utils': 1.1.3_react-dom@16.14.0
+      '@alilc/lowcode-types': 1.1.7
+      '@alilc/lowcode-utils': 1.1.7_react-dom@16.14.0
       classnames: 2.3.2
       debug: 4.3.4
       intl-messageformat: 9.13.0
@@ -258,14 +258,14 @@ packages:
       - react-native
       - supports-color
 
-  /@alilc/lowcode-editor-skeleton/1.1.3:
-    resolution: {integrity: sha512-TtofjN6EkDbMgJSjG++9/l2lL1/XXcDGkg+NAJEFsbWvRJhXvNzXgdXfF4rjy/vV0kKo5Dzjku4LEAFFKAjWbQ==}
+  /@alilc/lowcode-editor-skeleton/1.1.7:
+    resolution: {integrity: sha512-wbbY6fQ9psODeuaM67MEk/jQ1IdZi1VzMQUCwuVmjnM5b+FEkQ+lEjM7q87YwfxFy8Q+/azeWMeKmNt17YR+2g==}
     dependencies:
       '@alifd/next': 1.26.12_wcqkhtmu7mswc6yz4uyexck3ty
-      '@alilc/lowcode-designer': 1.1.3
-      '@alilc/lowcode-editor-core': 1.1.3
-      '@alilc/lowcode-types': 1.1.3
-      '@alilc/lowcode-utils': 1.1.3_react-dom@16.14.0
+      '@alilc/lowcode-designer': 1.1.7
+      '@alilc/lowcode-editor-core': 1.1.7
+      '@alilc/lowcode-types': 1.1.7
+      '@alilc/lowcode-utils': 1.1.7_react-dom@16.14.0
       classnames: 2.3.2
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
@@ -282,7 +282,7 @@ packages:
       react: ^16.3.0
     dependencies:
       '@alilc/lowcode-plugin-base-monaco-editor': 1.1.1
-      '@alilc/lowcode-types': 1.1.3
+      '@alilc/lowcode-types': 1.1.7
       '@alilc/lowcode-utils': 1.1.2
       classnames: 2.3.2
       cssjson: 2.1.3
@@ -303,7 +303,7 @@ packages:
     dependencies:
       '@alifd/next': 1.26.12_wcqkhtmu7mswc6yz4uyexck3ty
       '@alilc/lowcode-plugin-base-monaco-editor': 1.1.1
-      '@alilc/lowcode-types': 1.1.3
+      '@alilc/lowcode-types': 1.1.7
       '@alilc/lowcode-utils': 1.1.2_react-dom@16.14.0
       classnames: 2.3.2
       cssjson: 2.1.3
@@ -316,19 +316,19 @@ packages:
       - monaco-editor
       - react-dom
 
-  /@alilc/lowcode-engine/1.1.3:
-    resolution: {integrity: sha512-MazZdC75U27F/9V25VX6kZjl0loJFTWhf6YjCsGC7/D0Jo2mJ7Q5llS+C042TsgUGuZxWEbgYWJjCr37eGyG7Q==}
+  /@alilc/lowcode-engine/1.1.7:
+    resolution: {integrity: sha512-yCMfEhLCy6QMUoZMtxWyMll3P+1/xGIQEAtbfXPGlde2t/572ErChYbt2/7fOxmfBh4wjmxnFpX0hBjW9QARRA==}
     dependencies:
       '@alifd/next': 1.26.12_wcqkhtmu7mswc6yz4uyexck3ty
-      '@alilc/lowcode-designer': 1.1.3
-      '@alilc/lowcode-editor-core': 1.1.3
-      '@alilc/lowcode-editor-skeleton': 1.1.3
+      '@alilc/lowcode-designer': 1.1.7
+      '@alilc/lowcode-editor-core': 1.1.7
+      '@alilc/lowcode-editor-skeleton': 1.1.7
       '@alilc/lowcode-engine-ext': 1.0.5_rjjdf77tg4nyojejkmk6myoeeu
-      '@alilc/lowcode-plugin-designer': 1.1.3
-      '@alilc/lowcode-plugin-outline-pane': 1.1.3
-      '@alilc/lowcode-shell': 1.1.3
-      '@alilc/lowcode-utils': 1.1.3_react-dom@16.14.0
-      '@alilc/lowcode-workspace': 1.1.3
+      '@alilc/lowcode-plugin-designer': 1.1.7
+      '@alilc/lowcode-plugin-outline-pane': 1.1.7
+      '@alilc/lowcode-shell': 1.1.7
+      '@alilc/lowcode-utils': 1.1.7_react-dom@16.14.0
+      '@alilc/lowcode-workspace': 1.1.7
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     transitivePeerDependencies:
@@ -346,19 +346,10 @@ packages:
     transitivePeerDependencies:
       - monaco-editor
 
-  /@alilc/lowcode-plugin-base-monaco-editor/1.1.1_monaco-editor@0.36.1:
-    resolution: {integrity: sha512-6IC4oSveL2FnPZ5igfWNkB0oXkTbbCD5EUAxH1CinGdnWA2SYBq8Nl8hrDBdimMKE+bPIsWee77MLikDi7IEFQ==}
-    dependencies:
-      '@monaco-editor/loader': 1.3.0_monaco-editor@0.36.1
-      classnames: 2.3.2
-    transitivePeerDependencies:
-      - monaco-editor
-    dev: false
-
   /@alilc/lowcode-plugin-components-pane/1.0.7:
     resolution: {integrity: sha512-+QIwI81Lc6jrXbH0twXoGABsQFaFOKqD0rla8JLGx6N/NtkuABygtIRIvErQP5SYMc8ul7Kxt7isDwsrT+HbYg==}
     dependencies:
-      '@alilc/lowcode-types': 1.1.3
+      '@alilc/lowcode-types': 1.1.7
       classnames: 2.3.2
       lodash.debounce: 4.0.8
       react: 16.14.0
@@ -371,7 +362,7 @@ packages:
     dependencies:
       '@alifd/next': 1.26.12_wcqkhtmu7mswc6yz4uyexck3ty
       '@alilc/lowcode-plugin-base-monaco-editor': 1.1.1
-      '@alilc/lowcode-types': 1.1.3
+      '@alilc/lowcode-types': 1.1.7
       '@babel/core': 7.21.0
       '@babel/parser': 7.21.1
       '@babel/preset-env': 7.20.2_@babel+core@7.21.0
@@ -412,12 +403,12 @@ packages:
       - typescript
     dev: false
 
-  /@alilc/lowcode-plugin-designer/1.1.3:
-    resolution: {integrity: sha512-iYWNV1co7E8bHZb2vqbtHUoGmnqB6W83xOtrKsOfmeBmUa1NZ6nZ7BhFeLKpkRxodkTl7H3hEmhHvgv87UUosQ==}
+  /@alilc/lowcode-plugin-designer/1.1.7:
+    resolution: {integrity: sha512-FZVqcc3g0rhQPQYkP+/zNswTIAeU/tN0JjR6554aOq8cXpVmpZ+cdiNE6oos02W2C3LgSN7vaVYhSyTvvLC/PA==}
     dependencies:
-      '@alilc/lowcode-designer': 1.1.3
-      '@alilc/lowcode-editor-core': 1.1.3
-      '@alilc/lowcode-utils': 1.1.3_react-dom@16.14.0
+      '@alilc/lowcode-designer': 1.1.7
+      '@alilc/lowcode-editor-core': 1.1.7
+      '@alilc/lowcode-utils': 1.1.7_react-dom@16.14.0
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
     transitivePeerDependencies:
@@ -432,8 +423,8 @@ packages:
       react: ^16.0.0
     dependencies:
       '@alifd/next': 1.26.12
-      '@alilc/lowcode-engine': 1.1.3
-      '@alilc/lowcode-types': 1.1.3
+      '@alilc/lowcode-engine': 1.1.7
+      '@alilc/lowcode-types': 1.1.7
       '@alilc/lowcode-utils': 1.1.2
       case: 1.6.3
       fetch-jsonp: 1.2.3
@@ -447,14 +438,12 @@ packages:
       - supports-color
     dev: false
 
-  /@alilc/lowcode-plugin-outline-pane/1.1.3:
-    resolution: {integrity: sha512-JYc2G7jcsA+3825pdirBFaxzb1ODunwQEJQT1KkyaK2rgIIYOELZ95FBO/Qp0mWLk7FY/X1rrDI9/nVI3ZY0lQ==}
+  /@alilc/lowcode-plugin-outline-pane/1.1.7:
+    resolution: {integrity: sha512-MYgeryo1qjoXcU/AFcLd/pT8S4TRNX/EDkClWn/Bt6DfPccLy25L2FBU80/injGhjsQXcc74YHPl8iPTTUeLoA==}
     dependencies:
       '@alifd/next': 1.26.12_wcqkhtmu7mswc6yz4uyexck3ty
-      '@alilc/lowcode-designer': 1.1.3
-      '@alilc/lowcode-editor-core': 1.1.3
-      '@alilc/lowcode-types': 1.1.3
-      '@alilc/lowcode-utils': 1.1.3_react-dom@16.14.0
+      '@alilc/lowcode-types': 1.1.7
+      '@alilc/lowcode-utils': 1.1.7_react-dom@16.14.0
       classnames: 2.3.2
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
@@ -462,8 +451,6 @@ packages:
     transitivePeerDependencies:
       - '@alifd/meet-react'
       - moment
-      - react-native
-      - supports-color
 
   /@alilc/lowcode-plugin-schema/1.0.5:
     resolution: {integrity: sha512-gocgTFZhKLFGhhI86bKG06dczq6JHA7+4flA5g6oGzxSCtbg931NDTVfKOC8/6p57awGEE9v+WctahDRMlhe3w==}
@@ -483,7 +470,7 @@ packages:
   /@alilc/lowcode-plugin-undo-redo/1.0.0:
     resolution: {integrity: sha512-PUZW1TgvPcan4Di5gfEl8IbI15qcAFVLZ1oG1EEfHKPCvIiOV62f+uF38QO2SsuzphV1rg1mF4dFfDmyAZw4Mg==}
     dependencies:
-      '@alilc/lowcode-types': 1.1.3
+      '@alilc/lowcode-types': 1.1.7
       '@alilc/lowcode-utils': 1.1.2_react-dom@16.14.0
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0
@@ -492,15 +479,15 @@ packages:
       - moment
     dev: false
 
-  /@alilc/lowcode-shell/1.1.3:
-    resolution: {integrity: sha512-UExRO1FPkBfX2r4E1uG6F0IqX+LdAfKfod8Bx3J1kkyfecxCJJqjdeKmpQSu3ahn0XyzhYfrW6t2+XK/HFDlOQ==}
+  /@alilc/lowcode-shell/1.1.7:
+    resolution: {integrity: sha512-nvAkFhFTHU5HKdKqaSFNxrlzChr5sleCTSQvsEsAEY/gPCZ1+m1evn8nz7493kv3OWvMZU9JEGJYAq3wU8ikFw==}
     dependencies:
-      '@alilc/lowcode-designer': 1.1.3
-      '@alilc/lowcode-editor-core': 1.1.3
-      '@alilc/lowcode-editor-skeleton': 1.1.3
-      '@alilc/lowcode-types': 1.1.3
-      '@alilc/lowcode-utils': 1.1.3_react-dom@16.14.0
-      '@alilc/lowcode-workspace': 1.1.3
+      '@alilc/lowcode-designer': 1.1.7
+      '@alilc/lowcode-editor-core': 1.1.7
+      '@alilc/lowcode-editor-skeleton': 1.1.7
+      '@alilc/lowcode-types': 1.1.7
+      '@alilc/lowcode-utils': 1.1.7_react-dom@16.14.0
+      '@alilc/lowcode-workspace': 1.1.7
       classnames: 2.3.2
       enzyme: 3.11.0
       enzyme-adapter-react-16: 1.15.7_j6bpv5pizkyfppcg2tmva6pmii
@@ -519,8 +506,8 @@ packages:
       react: 16.14.0
       strict-event-emitter-types: 2.0.0
 
-  /@alilc/lowcode-types/1.1.3:
-    resolution: {integrity: sha512-9T+oSN7WVxwcGfYpuUOuBOgoezraZL3v3Dp9TU0UHOlnswns4JIHT5UCtFNl/A7X30s32cHbYc9CRZrMLcAcwg==}
+  /@alilc/lowcode-types/1.1.7:
+    resolution: {integrity: sha512-Y/6lZ3gqH7VVcJul+YUqV1KQOzh1RYZyPcNgOAjqaFZC4mA++QN7cqbHFymdFJtGRKCpU5RD7aTUQusSL/GDSA==}
     dependencies:
       '@alilc/lowcode-datasource-types': 1.1.4
       react: 16.14.0
@@ -552,11 +539,11 @@ packages:
       - moment
       - react-dom
 
-  /@alilc/lowcode-utils/1.1.3_react-dom@16.14.0:
-    resolution: {integrity: sha512-Eiyos+QrX0OKASXK0xuAGjNKhh8NoL+kVP3jO0PHxyEGqTBT/Uf2xVOZvpOpEfbJguYRkD/C/9hrJ7aqd0aVDQ==}
+  /@alilc/lowcode-utils/1.1.7_react-dom@16.14.0:
+    resolution: {integrity: sha512-Jqd25LI0jduOr8kGlieHywS64MsqHhs0h5d5lZU/+XGqGN9/F5yuJR+ph7cdEFqkT0AbGSijYnlcZNTB7KvEqA==}
     dependencies:
       '@alifd/next': 1.26.12_wcqkhtmu7mswc6yz4uyexck3ty
-      '@alilc/lowcode-types': 1.1.3
+      '@alilc/lowcode-types': 1.1.7
       lodash: 4.17.21
       mobx: 6.8.0
       react: 16.14.0
@@ -565,14 +552,14 @@ packages:
       - moment
       - react-dom
 
-  /@alilc/lowcode-workspace/1.1.3:
-    resolution: {integrity: sha512-GpogUnzfrbKDuUFxdN04duz5DTrcnyrBP+AcTV97Vk5BjOoF8n1V824NZcpFswIj8cNoa4ZZ77KCXFZescGMZw==}
+  /@alilc/lowcode-workspace/1.1.7:
+    resolution: {integrity: sha512-TGGvtfLcoea2rX6tBaDjljbSi80YJDWGrB3DtsIFvlXHD2WR5bK658VefJOMxonDihjT022fGlDqqKjT+5y4CQ==}
     dependencies:
-      '@alilc/lowcode-designer': 1.1.3
-      '@alilc/lowcode-editor-core': 1.1.3
-      '@alilc/lowcode-editor-skeleton': 1.1.3
-      '@alilc/lowcode-types': 1.1.3
-      '@alilc/lowcode-utils': 1.1.3_react-dom@16.14.0
+      '@alilc/lowcode-designer': 1.1.7
+      '@alilc/lowcode-editor-core': 1.1.7
+      '@alilc/lowcode-editor-skeleton': 1.1.7
+      '@alilc/lowcode-types': 1.1.7
+      '@alilc/lowcode-utils': 1.1.7_react-dom@16.14.0
       classnames: 2.3.2
       enzyme: 3.11.0
       enzyme-adapter-react-16: 1.15.7_j6bpv5pizkyfppcg2tmva6pmii
@@ -2474,10 +2461,10 @@ packages:
       '@formatjs/intl-localematcher': 0.2.25
       tslib: 2.5.0
 
-  /@formatjs/ecma402-abstract/1.14.3:
-    resolution: {integrity: sha512-SlsbRC/RX+/zg4AApWIFNDdkLtFbkq3LNoZWXZCE/nHVKqoIJyaoQyge/I0Y38vLxowUn9KTtXgusLD91+orbg==}
+  /@formatjs/ecma402-abstract/1.17.0:
+    resolution: {integrity: sha512-6ueQTeJZtwKjmh23bdkq/DMqH4l4bmfvtQH98blOSbiXv/OUiyijSW6jU22IT8BNM1ujCaEvJfTtyCYVH38EMQ==}
     dependencies:
-      '@formatjs/intl-localematcher': 0.2.32
+      '@formatjs/intl-localematcher': 0.4.0
       tslib: 2.5.0
     dev: false
 
@@ -2486,8 +2473,8 @@ packages:
     dependencies:
       tslib: 2.5.0
 
-  /@formatjs/fast-memoize/1.2.8:
-    resolution: {integrity: sha512-PemNUObyoIZcqdQ1ixTPugzAzhEj7j6AHIyrq/qR6x5BFTvOQeXHYsVZUqBEFduAIscUaDfou+U+xTqOiunJ3Q==}
+  /@formatjs/fast-memoize/2.2.0:
+    resolution: {integrity: sha512-hnk/nY8FyrL5YxwP9e4r9dqeM6cAbo8PeU9UjyXojZMNvVad2Z06FAVHyR3Ecw6fza+0GH7vdJgiKIVXTMbSBA==}
     dependencies:
       tslib: 2.5.0
     dev: false
@@ -2499,18 +2486,11 @@ packages:
       '@formatjs/icu-skeleton-parser': 1.3.6
       tslib: 2.5.0
 
-  /@formatjs/icu-messageformat-parser/2.3.0:
-    resolution: {integrity: sha512-xqtlqYAbfJDF4b6e4O828LBNOWXrFcuYadqAbYORlDRwhyJ2bH+xpUBPldZbzRGUN2mxlZ4Ykhm7jvERtmI8NQ==}
+  /@formatjs/icu-messageformat-parser/2.6.0:
+    resolution: {integrity: sha512-yT6at0qc0DANw9qM/TU8RZaCtfDXtj4pZM/IC2WnVU80yAcliS3KVDiuUt4jSQAeFL9JS5bc2hARnFmjPdA6qw==}
     dependencies:
-      '@formatjs/ecma402-abstract': 1.14.3
-      '@formatjs/icu-skeleton-parser': 1.3.18
-      tslib: 2.5.0
-    dev: false
-
-  /@formatjs/icu-skeleton-parser/1.3.18:
-    resolution: {integrity: sha512-ND1ZkZfmLPcHjAH1sVpkpQxA+QYfOX3py3SjKWMUVGDow18gZ0WPqz3F+pJLYQMpS2LnnQ5zYR2jPVYTbRwMpg==}
-    dependencies:
-      '@formatjs/ecma402-abstract': 1.14.3
+      '@formatjs/ecma402-abstract': 1.17.0
+      '@formatjs/icu-skeleton-parser': 1.6.0
       tslib: 2.5.0
     dev: false
 
@@ -2520,13 +2500,20 @@ packages:
       '@formatjs/ecma402-abstract': 1.11.4
       tslib: 2.5.0
 
+  /@formatjs/icu-skeleton-parser/1.6.0:
+    resolution: {integrity: sha512-eMmxNpoX/J1IPUjPGSZwo0Wh+7CEvdEMddP2Jxg1gQJXfGfht/FdW2D5XDFj3VMbOTUQlDIdZJY7uC6O6gjPoA==}
+    dependencies:
+      '@formatjs/ecma402-abstract': 1.17.0
+      tslib: 2.5.0
+    dev: false
+
   /@formatjs/intl-localematcher/0.2.25:
     resolution: {integrity: sha512-YmLcX70BxoSopLFdLr1Ds99NdlTI2oWoLbaUW2M406lxOIPzE1KQhRz2fPUkq34xVZQaihCoU29h0KK7An3bhA==}
     dependencies:
       tslib: 2.5.0
 
-  /@formatjs/intl-localematcher/0.2.32:
-    resolution: {integrity: sha512-k/MEBstff4sttohyEpXxCmC3MqbUn9VvHGlZ8fauLzkbwXmVrEeyzS+4uhrvAk9DWU9/7otYWxyDox4nT/KVLQ==}
+  /@formatjs/intl-localematcher/0.4.0:
+    resolution: {integrity: sha512-bRTd+rKomvfdS4QDlVJ6TA/Jx1F2h/TBVO5LjvhQ7QPPHp19oPNMIum7W2CMEReq/zPxpmCeB31F9+5gl/qtvw==}
     dependencies:
       tslib: 2.5.0
     dev: false
@@ -3044,47 +3031,52 @@ packages:
     resolution: {integrity: sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==}
     dev: false
 
-  /@knxcloud/lowcode-hooks/1.6.0-beta.4_kdffdoyecplkkkzijvqjxp5knq:
-    resolution: {integrity: sha512-Av85kRLoXBUE4gKbrCmr2Fp8IpvtmkudLtWouDkub76ISnMzMakvLGha1/CUkAQp67BvP+hNgWSYkkU+8igd6w==}
+  /@knxcloud/lowcode-data-source/1.0.0-beta.0_efx5gj36jllg4wcfltedxkwuny:
+    resolution: {integrity: sha512-GSMF8N7w6Rh7ELG/r10r2GhjQK58TX8qxQtCiC7gYyDANbm2eysb/kJUC7ToaS8RrwvwAy0HA8TP0Z+mIjjmHA==}
     peerDependencies:
-      '@alilc/lowcode-designer': '>= 1.1.x < 2'
+      '@alilc/lowcode-types': '>= 1.1.x'
+      vue: '>= 3.x'
+    dependencies:
+      '@alilc/lowcode-types': 1.1.7
+      '@knxcloud/lowcode-utils': 1.6.0-beta.6_efx5gj36jllg4wcfltedxkwuny
+      vue: 3.2.47
+    transitivePeerDependencies:
+      - '@alilc/lowcode-designer'
+    dev: false
+
+  /@knxcloud/lowcode-hooks/1.6.0-beta.5_efx5gj36jllg4wcfltedxkwuny:
+    resolution: {integrity: sha512-lKRG2ED5JODJDG0wJcbRJH0J0hxLEITFjWMyDRnfc6IRT/0YdRNCHQiG30KBsM/VHls1yuuljLY6pZdULlDY2A==}
+    peerDependencies:
       '@alilc/lowcode-types': '>= 1.1.x < 2'
       vue: '>= 3.x < 4'
-      vue-router: '*'
     peerDependenciesMeta:
-      '@alilc/lowcode-designer':
-        optional: true
       '@alilc/lowcode-types':
         optional: true
-      vue-router:
-        optional: true
     dependencies:
-      '@alilc/lowcode-types': 1.1.3
+      '@alilc/lowcode-types': 1.1.7
       vue: 3.2.47
     dev: false
 
-  /@knxcloud/lowcode-plugin-vue-code-editor/0.0.1-beta.6_kdffdoyecplkkkzijvqjxp5knq:
-    resolution: {integrity: sha512-iFAfBrRKOfb2KaKBkMztfQR+ZiwguOhJh/LtNR8XyAVUBblH9A9ufKPhnv04c9iMp1Ln0nIRmfleC9/CO/p17w==}
+  /@knxcloud/lowcode-plugin-vue-code-editor/0.0.1_efx5gj36jllg4wcfltedxkwuny:
+    resolution: {integrity: sha512-37klOB3NXPjFnORBODrbOYxrD2X9gGgMlcDeaAy8GJY134W2rMH5Gofh6J/wKIj/xFP9N0XXcvgBKHAJd204xQ==}
     peerDependencies:
       '@alifd/next': '*'
       react: '>=16'
     dependencies:
-      '@alilc/lowcode-plugin-base-monaco-editor': 1.1.1_monaco-editor@0.36.1
-      '@knxcloud/lowcode-utils': 1.6.0-beta.5_kdffdoyecplkkkzijvqjxp5knq
-      '@monaco-editor/loader': 1.3.2_monaco-editor@0.36.1
-      '@vue/compiler-core': 3.2.47
+      '@alilc/lowcode-plugin-base-monaco-editor': 1.1.1
+      '@knxcloud/lowcode-utils': 1.6.0-beta.6_efx5gj36jllg4wcfltedxkwuny
       acorn: 8.8.2
       magic-string: 0.30.0
-      monaco-editor: 0.36.1
       short-uuid: 4.2.2
     transitivePeerDependencies:
       - '@alilc/lowcode-designer'
       - '@alilc/lowcode-types'
+      - monaco-editor
       - vue
     dev: false
 
-  /@knxcloud/lowcode-utils/1.6.0-beta.5_kdffdoyecplkkkzijvqjxp5knq:
-    resolution: {integrity: sha512-Zi3B1DtWgOTMcphDuuMsbItFC/ZMyJTB3DwpVedpdvIfkXkcLQ486qQHbUQNf3sI2PUg3O62tGaGBfn9dBq8nw==}
+  /@knxcloud/lowcode-utils/1.6.0-beta.6_efx5gj36jllg4wcfltedxkwuny:
+    resolution: {integrity: sha512-1F7Tv0StnpNTbnyqzZhIujfQuQ46n7od89rhPYeg7VWIvlenkDwSjxMCOSf0zFr0p6F5G352i2DoRe9hGUR9nQ==}
     peerDependencies:
       '@alilc/lowcode-designer': '>= 1.1.x < 2'
       '@alilc/lowcode-types': '>= 1.1.x < 2'
@@ -3097,34 +3089,33 @@ packages:
       vue:
         optional: true
     dependencies:
-      '@alilc/lowcode-types': 1.1.3
+      '@alilc/lowcode-types': 1.1.7
       vue: 3.2.47
     dev: false
 
-  /@knxcloud/lowcode-vue-renderer/1.6.0-beta.7_kdffdoyecplkkkzijvqjxp5knq:
-    resolution: {integrity: sha512-EJCzxm1uDzUb1KrghnJtzjbP0/7b2t/Qy1NkHTzASHBX9kr2ULOTAMvXN7zthAkGqUp2fNbfcMDQaLq4IW1d9w==}
+  /@knxcloud/lowcode-vue-renderer/1.6.0-beta.9_efx5gj36jllg4wcfltedxkwuny:
+    resolution: {integrity: sha512-iVGgPyOpwz7kt2FsSicSzPkQIGhJVi6G41ajfkcfW3koflwZ1UShTD5LB/kFWqMBNk3fgwXvJ2Sahn6zZGIgaA==}
     peerDependencies:
       '@alilc/lowcode-designer': '>= 1.1.x < 2'
       '@alilc/lowcode-types': '>= 1.1.x < 2'
       vue: '>= 3.x < 4'
       vue-router: '>= 4.x < 5'
     peerDependenciesMeta:
-      '@alilc/lowcode-designer':
-        optional: true
       '@alilc/lowcode-types':
         optional: true
       vue-router:
         optional: true
     dependencies:
-      '@alilc/lowcode-types': 1.1.3
-      '@knxcloud/lowcode-hooks': 1.6.0-beta.4_kdffdoyecplkkkzijvqjxp5knq
-      '@knxcloud/lowcode-utils': 1.6.0-beta.5_kdffdoyecplkkkzijvqjxp5knq
-      intl-messageformat: 10.3.1
+      '@alilc/lowcode-types': 1.1.7
+      '@knxcloud/lowcode-data-source': 1.0.0-beta.0_efx5gj36jllg4wcfltedxkwuny
+      '@knxcloud/lowcode-hooks': 1.6.0-beta.5_efx5gj36jllg4wcfltedxkwuny
+      '@knxcloud/lowcode-utils': 1.6.0-beta.6_efx5gj36jllg4wcfltedxkwuny
+      intl-messageformat: 10.5.0
       vue: 3.2.47
     dev: false
 
-  /@knxcloud/lowcode-vue-simulator-renderer/1.6.0-beta.7_kdffdoyecplkkkzijvqjxp5knq:
-    resolution: {integrity: sha512-/WOBvH2XvYcu+jBTLG3hjc26yLbhC1vuwKprwPPHDaZqbcF56JFHgiaeXxIazC1QouFKLvutWMLED2PdSJRC2A==}
+  /@knxcloud/lowcode-vue-simulator-renderer/1.6.0-beta.9_efx5gj36jllg4wcfltedxkwuny:
+    resolution: {integrity: sha512-3CC0XhOLbUJ/ygjA6gAliUxLXHO/IW6p8zg9Im9Kc/yUYaE4eEN+yemfxq+V6A4sjjLnqIi0xXXViTIjAM7zMA==}
     peerDependencies:
       '@alilc/lowcode-designer': '>= 1.1.x < 2'
       '@alilc/lowcode-types': '>= 1.1.x < 2'
@@ -3136,10 +3127,10 @@ packages:
       '@alilc/lowcode-types':
         optional: true
     dependencies:
-      '@alilc/lowcode-types': 1.1.3
-      '@knxcloud/lowcode-hooks': 1.6.0-beta.4_kdffdoyecplkkkzijvqjxp5knq
-      '@knxcloud/lowcode-utils': 1.6.0-beta.5_kdffdoyecplkkkzijvqjxp5knq
-      '@knxcloud/lowcode-vue-renderer': 1.6.0-beta.7_kdffdoyecplkkkzijvqjxp5knq
+      '@alilc/lowcode-types': 1.1.7
+      '@knxcloud/lowcode-hooks': 1.6.0-beta.5_efx5gj36jllg4wcfltedxkwuny
+      '@knxcloud/lowcode-utils': 1.6.0-beta.6_efx5gj36jllg4wcfltedxkwuny
+      '@knxcloud/lowcode-vue-renderer': 1.6.0-beta.9_efx5gj36jllg4wcfltedxkwuny
       vue: 3.2.47
     dev: false
 
@@ -3149,24 +3140,6 @@ packages:
       monaco-editor: '>= 0.21.0 < 1'
     dependencies:
       state-local: 1.0.7
-
-  /@monaco-editor/loader/1.3.0_monaco-editor@0.36.1:
-    resolution: {integrity: sha512-N3mGq1ktC3zh7WUx3NGO+PSDdNq9Vspk/41rEmRdrCqV9vNbBTRzAOplmUpNQsi+hmTs++ERMBobMERb8Kb+3g==}
-    peerDependencies:
-      monaco-editor: '>= 0.21.0 < 1'
-    dependencies:
-      monaco-editor: 0.36.1
-      state-local: 1.0.7
-    dev: false
-
-  /@monaco-editor/loader/1.3.2_monaco-editor@0.36.1:
-    resolution: {integrity: sha512-BTDbpHl3e47r3AAtpfVFTlAi7WXv4UQ/xZmz8atKl4q7epQV5e7+JbigFDViWF71VBi4IIBdcWP57Hj+OWuc9g==}
-    peerDependencies:
-      monaco-editor: '>= 0.21.0 < 1'
-    dependencies:
-      monaco-editor: 0.36.1
-      state-local: 1.0.7
-    dev: false
 
   /@mrmlnc/readdir-enhanced/2.2.1:
     resolution: {integrity: sha512-bPHp6Ji8b41szTOcaP63VlnbbO5Ny6dwAATtY6JTjh5N2OLrb5Qk/Th5cRkRQhkWCt+EJsYrNB0MiL+Gpn6e3g==}
@@ -8511,18 +8484,6 @@ packages:
         optional: true
     dev: true
 
-  /follow-redirects/1.15.2_debug@4.3.4:
-    resolution: {integrity: sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==}
-    engines: {node: '>=4.0'}
-    peerDependencies:
-      debug: '*'
-    peerDependenciesMeta:
-      debug:
-        optional: true
-    dependencies:
-      debug: 4.3.4_supports-color@6.1.0
-    dev: true
-
   /for-each/0.3.3:
     resolution: {integrity: sha512-jqYfLp7mo9vIyQf8ykW2v7A+2N4QjeCeI5+Dz9XraiO1ign81wjiH7Fb9vSOWvQfNtmSa4H2RoQTrrXivdUZmw==}
     dependencies:
@@ -8763,7 +8724,7 @@ packages:
     resolution: {integrity: sha512-oWb1Z6mkHIskLzEJ/XWX0srkpkTQ7vaopMQkyaEIoq0fmtFVxOthb8cCxeT+p3ynTdkk/RZwbgG4brR5BeWECw==}
     engines: {node: '>= 4.0'}
     os: [darwin]
-    deprecated: fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2.
+    deprecated: The v1 package contains DANGEROUS / INSECURE binaries. Upgrade to safe fsevents v2
     requiresBuild: true
     dependencies:
       bindings: 1.5.0
@@ -9495,7 +9456,7 @@ packages:
     engines: {node: '>=8.0.0'}
     dependencies:
       eventemitter3: 4.0.7
-      follow-redirects: 1.15.2_debug@4.3.4
+      follow-redirects: 1.15.2
       requires-port: 1.0.0
     transitivePeerDependencies:
       - debug
@@ -9794,12 +9755,12 @@ packages:
       has: 1.0.3
       side-channel: 1.0.4
 
-  /intl-messageformat/10.3.1:
-    resolution: {integrity: sha512-mqHc6arhbogrdImIsEscdjWnJcg2bvg3MiyGXDsTSGmPbbM2KtRUe7oNgDUbkM3HMn4KbyOct2JyJScmwRgGSQ==}
+  /intl-messageformat/10.5.0:
+    resolution: {integrity: sha512-AvojYuOaRb6r2veOKfTVpxH9TrmjSdc5iR9R5RgBwrDZYSmAAFVT+QLbW3C4V7Qsg0OguMp67Q/EoUkxZzXRGw==}
     dependencies:
-      '@formatjs/ecma402-abstract': 1.14.3
-      '@formatjs/fast-memoize': 1.2.8
-      '@formatjs/icu-messageformat-parser': 2.3.0
+      '@formatjs/ecma402-abstract': 1.17.0
+      '@formatjs/fast-memoize': 2.2.0
+      '@formatjs/icu-messageformat-parser': 2.6.0
       tslib: 2.5.0
     dev: false
 
@@ -12414,10 +12375,6 @@ packages:
       yargs: 4.6.0
     transitivePeerDependencies:
       - supports-color
-    dev: false
-
-  /monaco-editor/0.36.1:
-    resolution: {integrity: sha512-/CaclMHKQ3A6rnzBzOADfwdSJ25BFoFT0Emxsc4zYVyav5SkK9iA6lEtIeuN/oRYbwPgviJT+t3l+sjFa28jYg==}
     dev: false
 
   /moo/0.5.2:
