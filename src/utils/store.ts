@@ -3,7 +3,7 @@ import { filterPackages } from '@alilc/lowcode-plugin-inject';
 import { IPublicEnumTransformStage } from '@alilc/lowcode-types';
 
 export const setPackgesToLocalStorage = async () => {
-  const packages = await filterPackages(material.getAssets().packages);
+  const packages = await filterPackages(material.getAssets()!.packages);
   window.localStorage.setItem('packages', JSON.stringify(packages));
 };
 

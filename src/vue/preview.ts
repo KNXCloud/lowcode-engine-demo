@@ -1,7 +1,13 @@
 import { Asset } from '@alilc/lowcode-types';
 import VueRenderer from '@knxcloud/lowcode-vue-renderer';
-import { buildComponents, AssetLoader } from '@knxcloud/lowcode-utils';
+import { buildComponents, AssetLoader, noop } from '@knxcloud/lowcode-utils';
 import { h, createApp, toRaw, Suspense } from 'vue';
+
+window['__VUE_HMR_RUNTIME__'] = {
+  reload: noop,
+  rerender: noop,
+  createRecord: noop,
+};
 
 const init = async () => {
   const packages = JSON.parse(window.localStorage.getItem('packages') || '[]');
