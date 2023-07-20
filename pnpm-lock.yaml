@@ -11,7 +11,7 @@ specifiers:
   '@alilc/lowcode-plugin-undo-redo': ^1.0.0
   '@alilc/lowcode-types': ^1.1.7
   '@babel/core': ^7.21.0
-  '@knxcloud/lowcode-plugin-vue-code-editor': 0.0.1
+  '@knxcloud/lowcode-plugin-vue-code-editor': 0.0.2
   '@knxcloud/lowcode-utils': ^1.6.0-beta.6
   '@knxcloud/lowcode-vue-renderer': ^1.6.0-beta.9
   '@knxcloud/lowcode-vue-simulator-renderer': ^1.6.0-beta.9
@@ -51,7 +51,7 @@ dependencies:
   '@alilc/lowcode-plugin-schema': 1.0.5
   '@alilc/lowcode-plugin-undo-redo': 1.0.0
   '@alilc/lowcode-types': 1.1.7
-  '@knxcloud/lowcode-plugin-vue-code-editor': 0.0.1_efx5gj36jllg4wcfltedxkwuny
+  '@knxcloud/lowcode-plugin-vue-code-editor': 0.0.2_efx5gj36jllg4wcfltedxkwuny
   '@knxcloud/lowcode-utils': 1.6.0-beta.6_efx5gj36jllg4wcfltedxkwuny
   '@knxcloud/lowcode-vue-renderer': 1.6.0-beta.9_efx5gj36jllg4wcfltedxkwuny
   '@knxcloud/lowcode-vue-simulator-renderer': 1.6.0-beta.9_efx5gj36jllg4wcfltedxkwuny
@@ -3057,8 +3057,8 @@ packages:
       vue: 3.2.47
     dev: false
 
-  /@knxcloud/lowcode-plugin-vue-code-editor/0.0.1_efx5gj36jllg4wcfltedxkwuny:
-    resolution: {integrity: sha512-37klOB3NXPjFnORBODrbOYxrD2X9gGgMlcDeaAy8GJY134W2rMH5Gofh6J/wKIj/xFP9N0XXcvgBKHAJd204xQ==}
+  /@knxcloud/lowcode-plugin-vue-code-editor/0.0.2_efx5gj36jllg4wcfltedxkwuny:
+    resolution: {integrity: sha512-CgJaDLtGbQJYYHUfzxttvMzZadTOXGR5RmZhIJRsIxvPhwnTFtk8aeQ6SjahpqPzaseXiCrmSArX2nFrO9mdKw==}
     peerDependencies:
       '@alifd/next': '*'
       react: '>=16'
@@ -8484,6 +8484,18 @@ packages:
         optional: true
     dev: true
 
+  /follow-redirects/1.15.2_debug@4.3.4:
+    resolution: {integrity: sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+    dependencies:
+      debug: 4.3.4_supports-color@6.1.0
+    dev: true
+
   /for-each/0.3.3:
     resolution: {integrity: sha512-jqYfLp7mo9vIyQf8ykW2v7A+2N4QjeCeI5+Dz9XraiO1ign81wjiH7Fb9vSOWvQfNtmSa4H2RoQTrrXivdUZmw==}
     dependencies:
@@ -9456,7 +9468,7 @@ packages:
     engines: {node: '>=8.0.0'}
     dependencies:
       eventemitter3: 4.0.7
-      follow-redirects: 1.15.2
+      follow-redirects: 1.15.2_debug@4.3.4
       requires-port: 1.0.0
     transitivePeerDependencies:
       - debug
